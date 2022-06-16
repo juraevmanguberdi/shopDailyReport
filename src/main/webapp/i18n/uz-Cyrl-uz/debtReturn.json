@@ -1,0 +1,28 @@
+{
+  "shopDailyReportApp": {
+    "debtReturn": {
+      "home": {
+        "title": "Debt Returns",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Янги Debt Return қўшиш",
+        "createOrEditLabel": "Debt Returnни таҳрирлаш",
+        "notFound": "No Debt Returns found"
+      },
+      "created": "Debt Return {{ param }} билан қўшилди.",
+      "updated": "{{ param }}- Debt Return сақланди.",
+      "deleted": "{{ param }}- Debt Return ўчирилди.",
+      "delete": {
+        "question": "{{ id }}- Debt Returnни ўчирмоқчимисиз? "
+      },
+      "detail": {
+        "title": "Debt Return"
+      },
+      "id": "ID",
+      "returnAmount": "Return Amount",
+      "returnDate": "Return Date",
+      "code": "Code",
+      "client": "Client",
+      "paymentMethod": "Payment Method"
+    }
+  }
+}

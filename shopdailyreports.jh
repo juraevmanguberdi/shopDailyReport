@@ -1,0 +1,133 @@
+entity DebtGiven {
+  debtAmount Long required,
+  debtDate LocalDate required,
+  returnDate LocalDate required,
+  code String,
+}
+entity DebtReturn {
+  returnAmount Long required,
+  returnDate LocalDate required,
+  code String,
+}
+entity Expense {
+  amount Long required,
+  expenseDate LocalDate,
+  notes String,
+  code String,
+}
+entity ExpenseType {
+  name String required,
+  code String,
+  notes String,
+  createdDate LocalDate,
+}
+entity DailyRegistryShop {
+  today LocalDate required unique,
+  sales Long required,
+  goods Long required,
+  cashShop Long,
+  click Long,
+  terminal Long,
+  debtReturn Long,
+  debtGiven Long,
+  expense Long,
+  balance Long,
+  code String,
+}
+
+entity OwnerExpense {
+  amount Long required,
+  code String,
+  expenseDate LocalDate,
+  notes String,
+}
+entity OwnerExpenseType {
+  name String required,
+  code String,
+  notes String,
+  createdDate LocalDate,
+}
+
+entity Client {
+  name String required,
+  surName String required,
+  debtAmount Long,
+  address String,
+  phone String required,
+  notes String,
+  createdDate Instant,
+  code String,
+}
+
+entity PaymentMethod {
+  name String required,
+  code String,
+  note String,
+}
+entity AssetLive {
+  totalAssets Long,
+  currentAssets Long,
+  moneyTotal Long,
+  cashShop Long,
+  cashOwner Long,
+  bankAccount Long,
+  goods Long,  
+  debitor Long,
+  longTermAssets Long,
+  transport Long,
+  equipment Long,
+  realEstate Long,
+  other Long,
+  code String,
+  notes String,
+}
+entity AssetRegistry {
+  today LocalDate required unique,
+  totalAssets Long,
+  currentAssets Long,
+  moneyTotal Long,
+  cashShop Long,
+  cashOwner Long,
+  bankAccount Long,
+  goods Long,  
+  debitor Long,
+  longTermAssets Long,
+  transport Long,
+  equipment Long,
+  realEstate Long,
+  other Long,
+  code String,
+  notes String,
+}
+entity LiabilityRegistry {
+  today LocalDate required unique,
+  totalLiabilities Long,
+  supplier Long,
+  bankLoan Long,
+  other Long,
+  code String,
+  notes String,
+  
+}
+entity LiabilityLive {
+  totalLiabilities Long,
+  supplier Long,
+  bankLoan Long,
+  other Long,
+  code String,
+  notes String,
+  
+}
+relationship ManyToOne {
+  DebtGiven{client required} to Client
+  DebtReturn{client required} to Client
+  DebtReturn{paymentMethod required} to PaymentMethod
+  Expense{ExpenseType required} to ExpenseType
+  OwnerExpense{OwnerExpenseType required} to OwnerExpenseType
+}
+
+paginate * with pagination
+
+dto * with mapstruct
+
+service * with serviceClass

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.6.xsd">
+    <!--
+        Added the constraints for entity OwnerExpense.
+    -->
+    <changeSet id="20220616183332-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="owner_expense_type_id"
+                                 baseTableName="owner_expense"
+                                 constraintName="fk_owner_expense__owner_expense_type_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="owner_expense_type"/>
+    </changeSet>
+</databaseChangeLog>

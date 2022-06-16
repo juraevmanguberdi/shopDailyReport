@@ -1,0 +1,39 @@
+{
+  "shopDailyReportApp": {
+    "assetRegistry": {
+      "home": {
+        "title": "Asset Registries",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Янги Asset Registry қўшиш",
+        "createOrEditLabel": "Asset Registryни таҳрирлаш",
+        "notFound": "No Asset Registries found"
+      },
+      "created": "Asset Registry {{ param }} билан қўшилди.",
+      "updated": "{{ param }}- Asset Registry сақланди.",
+      "deleted": "{{ param }}- Asset Registry ўчирилди.",
+      "delete": {
+        "question": "{{ id }}- Asset Registryни ўчирмоқчимисиз? "
+      },
+      "detail": {
+        "title": "Asset Registry"
+      },
+      "id": "ID",
+      "today": "Today",
+      "totalAssets": "Total Assets",
+      "currentAssets": "Current Assets",
+      "moneyTotal": "Money Total",
+      "cashShop": "Cash Shop",
+      "cashOwner": "Cash Owner",
+      "bankAccount": "Bank Account",
+      "goods": "Goods",
+      "debitor": "Debitor",
+      "longTermAssets": "Long Term Assets",
+      "transport": "Transport",
+      "equipment": "Equipment",
+      "realEstate": "Real Estate",
+      "other": "Other",
+      "code": "Code",
+      "notes": "Notes"
+    }
+  }
+}

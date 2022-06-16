@@ -7,6 +7,19 @@
       "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
       "entities": {
         "main": "Маълумотлар",
+        "debtGiven": "Debt Given",
+        "debtReturn": "Debt Return",
+        "expense": "Expense",
+        "expenseType": "Expense Type",
+        "dailyRegistryShop": "Daily Registry Shop",
+        "ownerExpense": "Owner Expense",
+        "ownerExpenseType": "Owner Expense Type",
+        "client": "Client",
+        "paymentMethod": "Payment Method",
+        "assetLive": "Asset Live",
+        "assetRegistry": "Asset Registry",
+        "liabilityRegistry": "Liability Registry",
+        "liabilityLive": "Liability Live",
         "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
       },
       "account": {

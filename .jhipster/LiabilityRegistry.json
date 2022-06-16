@@ -1,0 +1,45 @@
+{
+  "applications": "*",
+  "changelogDate": "20220616183338",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "liability_registry",
+  "fields": [
+    {
+      "fieldName": "today",
+      "fieldType": "LocalDate",
+      "fieldValidateRules": ["required", "unique"]
+    },
+    {
+      "fieldName": "totalLiabilities",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "supplier",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "bankLoan",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "other",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "code",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "notes",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "LiabilityRegistry",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceClass"
+}

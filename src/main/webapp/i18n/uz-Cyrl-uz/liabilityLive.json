@@ -1,0 +1,29 @@
+{
+  "shopDailyReportApp": {
+    "liabilityLive": {
+      "home": {
+        "title": "Liability Lives",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Янги Liability Live қўшиш",
+        "createOrEditLabel": "Liability Liveни таҳрирлаш",
+        "notFound": "No Liability Lives found"
+      },
+      "created": "Liability Live {{ param }} билан қўшилди.",
+      "updated": "{{ param }}- Liability Live сақланди.",
+      "deleted": "{{ param }}- Liability Live ўчирилди.",
+      "delete": {
+        "question": "{{ id }}- Liability Liveни ўчирмоқчимисиз? "
+      },
+      "detail": {
+        "title": "Liability Live"
+      },
+      "id": "ID",
+      "totalLiabilities": "Total Liabilities",
+      "supplier": "Supplier",
+      "bankLoan": "Bank Loan",
+      "other": "Other",
+      "code": "Code",
+      "notes": "Notes"
+    }
+  }
+}

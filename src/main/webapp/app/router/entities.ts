@@ -3,12 +3,402 @@ import { Authority } from '@/shared/security/authority';
 // prettier-ignore
 const Entities = () => import('@/entities/entities.vue');
 
+// prettier-ignore
+const DebtGiven = () => import('@/entities/debt-given/debt-given.vue');
+// prettier-ignore
+const DebtGivenUpdate = () => import('@/entities/debt-given/debt-given-update.vue');
+// prettier-ignore
+const DebtGivenDetails = () => import('@/entities/debt-given/debt-given-details.vue');
+// prettier-ignore
+const DebtReturn = () => import('@/entities/debt-return/debt-return.vue');
+// prettier-ignore
+const DebtReturnUpdate = () => import('@/entities/debt-return/debt-return-update.vue');
+// prettier-ignore
+const DebtReturnDetails = () => import('@/entities/debt-return/debt-return-details.vue');
+// prettier-ignore
+const Expense = () => import('@/entities/expense/expense.vue');
+// prettier-ignore
+const ExpenseUpdate = () => import('@/entities/expense/expense-update.vue');
+// prettier-ignore
+const ExpenseDetails = () => import('@/entities/expense/expense-details.vue');
+// prettier-ignore
+const ExpenseType = () => import('@/entities/expense-type/expense-type.vue');
+// prettier-ignore
+const ExpenseTypeUpdate = () => import('@/entities/expense-type/expense-type-update.vue');
+// prettier-ignore
+const ExpenseTypeDetails = () => import('@/entities/expense-type/expense-type-details.vue');
+// prettier-ignore
+const DailyRegistryShop = () => import('@/entities/daily-registry-shop/daily-registry-shop.vue');
+// prettier-ignore
+const DailyRegistryShopUpdate = () => import('@/entities/daily-registry-shop/daily-registry-shop-update.vue');
+// prettier-ignore
+const DailyRegistryShopDetails = () => import('@/entities/daily-registry-shop/daily-registry-shop-details.vue');
+// prettier-ignore
+const OwnerExpense = () => import('@/entities/owner-expense/owner-expense.vue');
+// prettier-ignore
+const OwnerExpenseUpdate = () => import('@/entities/owner-expense/owner-expense-update.vue');
+// prettier-ignore
+const OwnerExpenseDetails = () => import('@/entities/owner-expense/owner-expense-details.vue');
+// prettier-ignore
+const OwnerExpenseType = () => import('@/entities/owner-expense-type/owner-expense-type.vue');
+// prettier-ignore
+const OwnerExpenseTypeUpdate = () => import('@/entities/owner-expense-type/owner-expense-type-update.vue');
+// prettier-ignore
+const OwnerExpenseTypeDetails = () => import('@/entities/owner-expense-type/owner-expense-type-details.vue');
+// prettier-ignore
+const Client = () => import('@/entities/client/client.vue');
+// prettier-ignore
+const ClientUpdate = () => import('@/entities/client/client-update.vue');
+// prettier-ignore
+const ClientDetails = () => import('@/entities/client/client-details.vue');
+// prettier-ignore
+const PaymentMethod = () => import('@/entities/payment-method/payment-method.vue');
+// prettier-ignore
+const PaymentMethodUpdate = () => import('@/entities/payment-method/payment-method-update.vue');
+// prettier-ignore
+const PaymentMethodDetails = () => import('@/entities/payment-method/payment-method-details.vue');
+// prettier-ignore
+const AssetLive = () => import('@/entities/asset-live/asset-live.vue');
+// prettier-ignore
+const AssetLiveUpdate = () => import('@/entities/asset-live/asset-live-update.vue');
+// prettier-ignore
+const AssetLiveDetails = () => import('@/entities/asset-live/asset-live-details.vue');
+// prettier-ignore
+const AssetRegistry = () => import('@/entities/asset-registry/asset-registry.vue');
+// prettier-ignore
+const AssetRegistryUpdate = () => import('@/entities/asset-registry/asset-registry-update.vue');
+// prettier-ignore
+const AssetRegistryDetails = () => import('@/entities/asset-registry/asset-registry-details.vue');
+// prettier-ignore
+const LiabilityRegistry = () => import('@/entities/liability-registry/liability-registry.vue');
+// prettier-ignore
+const LiabilityRegistryUpdate = () => import('@/entities/liability-registry/liability-registry-update.vue');
+// prettier-ignore
+const LiabilityRegistryDetails = () => import('@/entities/liability-registry/liability-registry-details.vue');
+// prettier-ignore
+const LiabilityLive = () => import('@/entities/liability-live/liability-live.vue');
+// prettier-ignore
+const LiabilityLiveUpdate = () => import('@/entities/liability-live/liability-live-update.vue');
+// prettier-ignore
+const LiabilityLiveDetails = () => import('@/entities/liability-live/liability-live-details.vue');
 // jhipster-needle-add-entity-to-router-import - JHipster will import entities to the router here
 
 export default {
   path: '/',
   component: Entities,
   children: [
+    {
+      path: 'debt-given',
+      name: 'DebtGiven',
+      component: DebtGiven,
+      meta: { authorities: [Authority.USER] },
+    },
+    {
+      path: 'debt-given/new',
+      name: 'DebtGivenCreate',
+      component: DebtGivenUpdate,
+      meta: { authorities: [Authority.USER] },
+    },
+    {
+      path: 'debt-given/:debtGivenId/edit',
+      name: 'DebtGivenEdit',
+      component: DebtGivenUpdate,
+      meta: { authorities: [Authority.USER] },
+    },
+    {
+      path: 'debt-given/:debtGivenId/view',
+      name: 'DebtGivenView',
+      component: DebtGivenDetails,
+      meta: { authorities: [Authority.USER] },
+    },
+    {
+      path: 'debt-return',
+      name: 'DebtReturn',
+      component: DebtReturn,
+      meta: { authorities: [Authority.USER] },
+    },
+    {
+      path: 'debt-return/new',
+      name: 'DebtReturnCreate',
+      component: DebtReturnUpdate,
+      meta: { authorities: [Authority.USER] },
+    },
+    {
+      path: 'debt-return/:debtReturnId/edit',
+      name: 'DebtReturnEdit',
+      component: DebtReturnUpdate,
+      meta: { authorities: [Authority.USER] },
+    },
+    {
+      path: 'debt-return/:debtReturnId/view',
+      name: 'DebtReturnView',
+      component: DebtReturnDetails,
+      meta: { authorities: [Authority.USER] },
+    },
+    {
+      path: 'expense',
+      name: 'Expense',
+      component: Expense,
+      meta: { authorities: [Authority.USER] },
+    },
+    {
+      path: 'expense/new',
+      name: 'ExpenseCreate',
+      component: ExpenseUpdate,
+      meta: { authorities: [Authority.USER] },
+    },
+    {
+      path: 'expense/:expenseId/edit',
+      name: 'ExpenseEdit',
+      component: ExpenseUpdate,
+      meta: { authorities: [Authority.USER] },
+    },
+    {
+      path: 'expense/:expenseId/view',
+      name: 'ExpenseView',
+      component: ExpenseDetails,
+      meta: { authorities: [Authority.USER] },
+    },
+    {
+      path: 'expense-type',
+      name: 'ExpenseType',
+      component: ExpenseType,
+      meta: { authorities: [Authority.USER] },
+    },
+    {
+      path: 'expense-type/new',
+      name: 'ExpenseTypeCreate',
+      component: ExpenseTypeUpdate,
+      meta: { authorities: [Authority.USER] },
+    },
+    {
+      path: 'expense-type/:expenseTypeId/edit',
+      name: 'ExpenseTypeEdit',
+      component: ExpenseTypeUpdate,
+      meta: { authorities: [Authority.USER] },
+    },
+    {
+      path: 'expense-type/:expenseTypeId/view',
+      name: 'ExpenseTypeView',
+      component: ExpenseTypeDetails,
+      meta: { authorities: [Authority.USER] },
+    },
+    {
+      path: 'daily-registry-shop',
+      name: 'DailyRegistryShop',
+      component: DailyRegistryShop,
+      meta: { authorities: [Authority.USER] },
+    },
+    {
+      path: 'daily-registry-shop/new',
+      name: 'DailyRegistryShopCreate',
+      component: DailyRegistryShopUpdate,
+      meta: { authorities: [Authority.USER] },
+    },
+    {
+      path: 'daily-registry-shop/:dailyRegistryShopId/edit',
+      name: 'DailyRegistryShopEdit',
+      component: DailyRegistryShopUpdate,
+      meta: { authorities: [Authority.USER] },
+    },
+    {
+      path: 'daily-registry-shop/:dailyRegistryShopId/view',
+      name: 'DailyRegistryShopView',
+      component: DailyRegistryShopDetails,
+      meta: { authorities: [Authority.USER] },
+    },
+    {
+      path: 'owner-expense',
+      name: 'OwnerExpense',
+      component: OwnerExpense,
+      meta: { authorities: [Authority.USER] },
+    },
+    {
+      path: 'owner-expense/new',
+      name: 'OwnerExpenseCreate',
+      component: OwnerExpenseUpdate,
+      meta: { authorities: [Authority.USER] },
+    },
+    {
+      path: 'owner-expense/:ownerExpenseId/edit',
+      name: 'OwnerExpenseEdit',
+      component: OwnerExpenseUpdate,
+      meta: { authorities: [Authority.USER] },
+    },
+    {
+      path: 'owner-expense/:ownerExpenseId/view',
+      name: 'OwnerExpenseView',
+      component: OwnerExpenseDetails,
+      meta: { authorities: [Authority.USER] },
+    },
+    {
+      path: 'owner-expense-type',
+      name: 'OwnerExpenseType',
+      component: OwnerExpenseType,
+      meta: { authorities: [Authority.USER] },
+    },
+    {
+      path: 'owner-expense-type/new',
+      name: 'OwnerExpenseTypeCreate',
+      component: OwnerExpenseTypeUpdate,
+      meta: { authorities: [Authority.USER] },
+    },
+    {
+      path: 'owner-expense-type/:ownerExpenseTypeId/edit',
+      name: 'OwnerExpenseTypeEdit',
+      component: OwnerExpenseTypeUpdate,
+      meta: { authorities: [Authority.USER] },
+    },
+    {
+      path: 'owner-expense-type/:ownerExpenseTypeId/view',
+      name: 'OwnerExpenseTypeView',
+      component: OwnerExpenseTypeDetails,
+      meta: { authorities: [Authority.USER] },
+    },
+    {
+      path: 'client',
+      name: 'Client',
+      component: Client,
+      meta: { authorities: [Authority.USER] },
+    },
+    {
+      path: 'client/new',
+      name: 'ClientCreate',
+      component: ClientUpdate,
+      meta: { authorities: [Authority.USER] },
+    },
+    {
+      path: 'client/:clientId/edit',
+      name: 'ClientEdit',
+      component: ClientUpdate,
+      meta: { authorities: [Authority.USER] },
+    },
+    {
+      path: 'client/:clientId/view',
+      name: 'ClientView',
+      component: ClientDetails,
+      meta: { authorities: [Authority.USER] },
+    },
+    {
+      path: 'payment-method',
+      name: 'PaymentMethod',
+      component: PaymentMethod,
+      meta: { authorities: [Authority.USER] },
+    },
+    {
+      path: 'payment-method/new',
+      name: 'PaymentMethodCreate',
+      component: PaymentMethodUpdate,
+      meta: { authorities: [Authority.USER] },
+    },
+    {
+      path: 'payment-method/:paymentMethodId/edit',
+      name: 'PaymentMethodEdit',
+      component: PaymentMethodUpdate,
+      meta: { authorities: [Authority.USER] },
+    },
+    {
+      path: 'payment-method/:paymentMethodId/view',
+      name: 'PaymentMethodView',
+      component: PaymentMethodDetails,
+      meta: { authorities: [Authority.USER] },
+    },
+    {
+      path: 'asset-live',
+      name: 'AssetLive',
+      component: AssetLive,
+      meta: { authorities: [Authority.USER] },
+    },
+    {
+      path: 'asset-live/new',
+      name: 'AssetLiveCreate',
+      component: AssetLiveUpdate,
+      meta: { authorities: [Authority.USER] },
+    },
+    {
+      path: 'asset-live/:assetLiveId/edit',
+      name: 'AssetLiveEdit',
+      component: AssetLiveUpdate,
+      meta: { authorities: [Authority.USER] },
+    },
+    {
+      path: 'asset-live/:assetLiveId/view',
+      name: 'AssetLiveView',
+      component: AssetLiveDetails,
+      meta: { authorities: [Authority.USER] },
+    },
+    {
+      path: 'asset-registry',
+      name: 'AssetRegistry',
+      component: AssetRegistry,
+      meta: { authorities: [Authority.USER] },
+    },
+    {
+      path: 'asset-registry/new',
+      name: 'AssetRegistryCreate',
+      component: AssetRegistryUpdate,
+      meta: { authorities: [Authority.USER] },
+    },
+    {
+      path: 'asset-registry/:assetRegistryId/edit',
+      name: 'AssetRegistryEdit',
+      component: AssetRegistryUpdate,
+      meta: { authorities: [Authority.USER] },
+    },
+    {
+      path: 'asset-registry/:assetRegistryId/view',
+      name: 'AssetRegistryView',
+      component: AssetRegistryDetails,
+      meta: { authorities: [Authority.USER] },
+    },
+    {
+      path: 'liability-registry',
+      name: 'LiabilityRegistry',
+      component: LiabilityRegistry,
+      meta: { authorities: [Authority.USER] },
+    },
+    {
+      path: 'liability-registry/new',
+      name: 'LiabilityRegistryCreate',
+      component: LiabilityRegistryUpdate,
+      meta: { authorities: [Authority.USER] },
+    },
+    {
+      path: 'liability-registry/:liabilityRegistryId/edit',
+      name: 'LiabilityRegistryEdit',
+      component: LiabilityRegistryUpdate,
+      meta: { authorities: [Authority.USER] },
+    },
+    {
+      path: 'liability-registry/:liabilityRegistryId/view',
+      name: 'LiabilityRegistryView',
+      component: LiabilityRegistryDetails,
+      meta: { authorities: [Authority.USER] },
+    },
+    {
+      path: 'liability-live',
+      name: 'LiabilityLive',
+      component: LiabilityLive,
+      meta: { authorities: [Authority.USER] },
+    },
+    {
+      path: 'liability-live/new',
+      name: 'LiabilityLiveCreate',
+      component: LiabilityLiveUpdate,
+      meta: { authorities: [Authority.USER] },
+    },
+    {
+      path: 'liability-live/:liabilityLiveId/edit',
+      name: 'LiabilityLiveEdit',
+      component: LiabilityLiveUpdate,
+      meta: { authorities: [Authority.USER] },
+    },
+    {
+      path: 'liability-live/:liabilityLiveId/view',
+      name: 'LiabilityLiveView',
+      component: LiabilityLiveDetails,
+      meta: { authorities: [Authority.USER] },
+    },
     // jhipster-needle-add-entity-to-router - JHipster will add entities to the router here
   ],
 };
