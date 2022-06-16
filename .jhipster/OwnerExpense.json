@@ -1,0 +1,41 @@
+{
+  "applications": "*",
+  "changelogDate": "20220616183332",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "owner_expense",
+  "fields": [
+    {
+      "fieldName": "amount",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "code",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "expenseDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "notes",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "OwnerExpense",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "ownerExpenseType",
+      "otherEntityRelationshipName": "ownerExpense",
+      "relationshipName": "ownerExpenseType",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": "required"
+    }
+  ],
+  "service": "serviceClass"
+}

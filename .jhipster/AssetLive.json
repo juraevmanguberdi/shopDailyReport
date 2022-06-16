@@ -1,0 +1,76 @@
+{
+  "applications": "*",
+  "changelogDate": "20220616183336",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "asset_live",
+  "fields": [
+    {
+      "fieldName": "totalAssets",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "currentAssets",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "moneyTotal",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "cashShop",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "cashOwner",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "bankAccount",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "goods",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "debitor",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "longTermAssets",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "transport",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "equipment",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "realEstate",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "other",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "code",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "notes",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "AssetLive",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceClass"
+}

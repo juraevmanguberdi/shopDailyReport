@@ -1,0 +1,28 @@
+{
+  "shopDailyReportApp": {
+    "ownerExpense": {
+      "home": {
+        "title": "Owner Expenses",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Янги Owner Expense қўшиш",
+        "createOrEditLabel": "Owner Expenseни таҳрирлаш",
+        "notFound": "No Owner Expenses found"
+      },
+      "created": "Owner Expense {{ param }} билан қўшилди.",
+      "updated": "{{ param }}- Owner Expense сақланди.",
+      "deleted": "{{ param }}- Owner Expense ўчирилди.",
+      "delete": {
+        "question": "{{ id }}- Owner Expenseни ўчирмоқчимисиз? "
+      },
+      "detail": {
+        "title": "Owner Expense"
+      },
+      "id": "ID",
+      "amount": "Amount",
+      "code": "Code",
+      "expenseDate": "Expense Date",
+      "notes": "Notes",
+      "ownerExpenseType": "Owner Expense Type"
+    }
+  }
+}

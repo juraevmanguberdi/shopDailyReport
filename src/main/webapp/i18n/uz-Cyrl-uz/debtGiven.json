@@ -1,0 +1,28 @@
+{
+  "shopDailyReportApp": {
+    "debtGiven": {
+      "home": {
+        "title": "Debt Givens",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Янги Debt Given қўшиш",
+        "createOrEditLabel": "Debt Givenни таҳрирлаш",
+        "notFound": "No Debt Givens found"
+      },
+      "created": "Debt Given {{ param }} билан қўшилди.",
+      "updated": "{{ param }}- Debt Given сақланди.",
+      "deleted": "{{ param }}- Debt Given ўчирилди.",
+      "delete": {
+        "question": "{{ id }}- Debt Givenни ўчирмоқчимисиз? "
+      },
+      "detail": {
+        "title": "Debt Given"
+      },
+      "id": "ID",
+      "debtAmount": "Debt Amount",
+      "debtDate": "Debt Date",
+      "returnDate": "Return Date",
+      "code": "Code",
+      "client": "Client"
+    }
+  }
+}

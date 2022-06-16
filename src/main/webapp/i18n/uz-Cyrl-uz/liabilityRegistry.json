@@ -1,0 +1,30 @@
+{
+  "shopDailyReportApp": {
+    "liabilityRegistry": {
+      "home": {
+        "title": "Liability Registries",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Янги Liability Registry қўшиш",
+        "createOrEditLabel": "Liability Registryни таҳрирлаш",
+        "notFound": "No Liability Registries found"
+      },
+      "created": "Liability Registry {{ param }} билан қўшилди.",
+      "updated": "{{ param }}- Liability Registry сақланди.",
+      "deleted": "{{ param }}- Liability Registry ўчирилди.",
+      "delete": {
+        "question": "{{ id }}- Liability Registryни ўчирмоқчимисиз? "
+      },
+      "detail": {
+        "title": "Liability Registry"
+      },
+      "id": "ID",
+      "today": "Today",
+      "totalLiabilities": "Total Liabilities",
+      "supplier": "Supplier",
+      "bankLoan": "Bank Loan",
+      "other": "Other",
+      "code": "Code",
+      "notes": "Notes"
+    }
+  }
+}

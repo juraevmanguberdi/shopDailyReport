@@ -1,0 +1,34 @@
+{
+  "shopDailyReportApp": {
+    "dailyRegistryShop": {
+      "home": {
+        "title": "Daily Registry Shops",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Янги Daily Registry Shop қўшиш",
+        "createOrEditLabel": "Daily Registry Shopни таҳрирлаш",
+        "notFound": "No Daily Registry Shops found"
+      },
+      "created": "Daily Registry Shop {{ param }} билан қўшилди.",
+      "updated": "{{ param }}- Daily Registry Shop сақланди.",
+      "deleted": "{{ param }}- Daily Registry Shop ўчирилди.",
+      "delete": {
+        "question": "{{ id }}- Daily Registry Shopни ўчирмоқчимисиз? "
+      },
+      "detail": {
+        "title": "Daily Registry Shop"
+      },
+      "id": "ID",
+      "today": "Today",
+      "sales": "Sales",
+      "goods": "Goods",
+      "cashShop": "Cash Shop",
+      "click": "Click",
+      "terminal": "Terminal",
+      "debtReturn": "Debt Return",
+      "debtGiven": "Debt Given",
+      "expense": "Expense",
+      "balance": "Balance",
+      "code": "Code"
+    }
+  }
+}

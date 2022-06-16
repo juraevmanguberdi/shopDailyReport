@@ -1,0 +1,45 @@
+{
+  "applications": "*",
+  "changelogDate": "20220616183328",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "debt_return",
+  "fields": [
+    {
+      "fieldName": "returnAmount",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "returnDate",
+      "fieldType": "LocalDate",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "code",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "DebtReturn",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "client",
+      "otherEntityRelationshipName": "debtReturn",
+      "relationshipName": "client",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": "required"
+    },
+    {
+      "otherEntityName": "paymentMethod",
+      "otherEntityRelationshipName": "debtReturn",
+      "relationshipName": "paymentMethod",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": "required"
+    }
+  ],
+  "service": "serviceClass"
+}

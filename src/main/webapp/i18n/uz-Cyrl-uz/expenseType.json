@@ -1,0 +1,27 @@
+{
+  "shopDailyReportApp": {
+    "expenseType": {
+      "home": {
+        "title": "Expense Types",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Янги Expense Type қўшиш",
+        "createOrEditLabel": "Expense Typeни таҳрирлаш",
+        "notFound": "No Expense Types found"
+      },
+      "created": "Expense Type {{ param }} билан қўшилди.",
+      "updated": "{{ param }}- Expense Type сақланди.",
+      "deleted": "{{ param }}- Expense Type ўчирилди.",
+      "delete": {
+        "question": "{{ id }}- Expense Typeни ўчирмоқчимисиз? "
+      },
+      "detail": {
+        "title": "Expense Type"
+      },
+      "id": "ID",
+      "name": "Name",
+      "code": "Code",
+      "notes": "Notes",
+      "createdDate": "Created Date"
+    }
+  }
+}

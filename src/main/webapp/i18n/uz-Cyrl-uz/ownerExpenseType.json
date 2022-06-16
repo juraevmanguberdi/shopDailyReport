@@ -1,0 +1,27 @@
+{
+  "shopDailyReportApp": {
+    "ownerExpenseType": {
+      "home": {
+        "title": "Owner Expense Types",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Янги Owner Expense Type қўшиш",
+        "createOrEditLabel": "Owner Expense Typeни таҳрирлаш",
+        "notFound": "No Owner Expense Types found"
+      },
+      "created": "Owner Expense Type {{ param }} билан қўшилди.",
+      "updated": "{{ param }}- Owner Expense Type сақланди.",
+      "deleted": "{{ param }}- Owner Expense Type ўчирилди.",
+      "delete": {
+        "question": "{{ id }}- Owner Expense Typeни ўчирмоқчимисиз? "
+      },
+      "detail": {
+        "title": "Owner Expense Type"
+      },
+      "id": "ID",
+      "name": "Name",
+      "code": "Code",
+      "notes": "Notes",
+      "createdDate": "Created Date"
+    }
+  }
+}
