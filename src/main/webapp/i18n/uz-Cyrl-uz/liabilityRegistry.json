@@ -3,7 +3,7 @@
     "liabilityRegistry": {
       "home": {
         "title": "Liability Registries",
-        "refreshListLabel": "Refresh list",
+        "refreshListLabel": "Yangilash",
         "createLabel": "Янги Liability Registry қўшиш",
         "createOrEditLabel": "Liability Registryни таҳрирлаш",
         "notFound": "No Liability Registries found"

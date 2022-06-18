@@ -18,6 +18,10 @@
     {
       "fieldName": "code",
       "fieldType": "String"
+    },
+    {
+      "fieldName": "notes",
+      "fieldType": "String"
     }
   ],
   "fluentMethods": true,

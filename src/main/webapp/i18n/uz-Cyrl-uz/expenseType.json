@@ -3,7 +3,7 @@
     "expenseType": {
       "home": {
         "title": "Expense Types",
-        "refreshListLabel": "Refresh list",
+        "refreshListLabel": "Yangilash",
         "createLabel": "Янги Expense Type қўшиш",
         "createOrEditLabel": "Expense Typeни таҳрирлаш",
         "notFound": "No Expense Types found"

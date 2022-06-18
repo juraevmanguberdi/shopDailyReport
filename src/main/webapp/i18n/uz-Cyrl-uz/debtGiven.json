@@ -2,27 +2,28 @@
   "shopDailyReportApp": {
     "debtGiven": {
       "home": {
-        "title": "Debt Givens",
-        "refreshListLabel": "Refresh list",
-        "createLabel": "Янги Debt Given қўшиш",
-        "createOrEditLabel": "Debt Givenни таҳрирлаш",
-        "notFound": "No Debt Givens found"
+        "title": "Qarzga savdo qilinganlar",
+        "refreshListLabel": "Yangilash",
+        "createLabel": "Янги qarz қўшиш",
+        "createOrEditLabel": "Qarzни таҳрирлаш",
+        "notFound": "Qarzlar yo'q"
       },
-      "created": "Debt Given {{ param }} билан қўшилди.",
-      "updated": "{{ param }}- Debt Given сақланди.",
-      "deleted": "{{ param }}- Debt Given ўчирилди.",
+      "created": "Qarz {{ param }} билан қўшилди.",
+      "updated": "{{ param }}- Qarz сақланди.",
+      "deleted": "{{ param }}- Qarz  ўчирилди.",
       "delete": {
-        "question": "{{ id }}- Debt Givenни ўчирмоқчимисиз? "
+        "question": "{{ id }}- Qarzни ўчирмоқчимисиз? "
       },
       "detail": {
-        "title": "Debt Given"
+        "title": "Qarzga berilgan"
       },
       "id": "ID",
-      "debtAmount": "Debt Amount",
-      "debtDate": "Debt Date",
-      "returnDate": "Return Date",
+      "debtAmount": "Qarz summasi",
+      "debtDate": "Sanasi",
+      "returnDate": "Qaytarish sanasi",
       "code": "Code",
-      "client": "Client"
+      "notes": "Qo'shimcha ma'lumot",
+      "client": "Mijoz"
     }
   }
 }

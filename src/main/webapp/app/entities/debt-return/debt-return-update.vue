@@ -86,6 +86,18 @@
             />
           </div>
           <div class="form-group">
+            <label class="form-control-label" v-text="$t('shopDailyReportApp.debtReturn.notes')" for="debt-return-notes">Notes</label>
+            <input
+              type="text"
+              class="form-control"
+              name="notes"
+              id="debt-return-notes"
+              data-cy="notes"
+              :class="{ valid: !$v.debtReturn.notes.$invalid, invalid: $v.debtReturn.notes.$invalid }"
+              v-model="$v.debtReturn.notes.$model"
+            />
+          </div>
+          <div class="form-group">
             <label class="form-control-label" v-text="$t('shopDailyReportApp.debtReturn.client')" for="debt-return-client">Client</label>
             <select class="form-control" id="debt-return-client" data-cy="client" name="client" v-model="debtReturn.client" required>
               <option v-if="!debtReturn.client" v-bind:value="null" selected></option>

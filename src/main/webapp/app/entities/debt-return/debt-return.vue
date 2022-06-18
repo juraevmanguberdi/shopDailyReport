@@ -44,6 +44,10 @@
               <span v-text="$t('shopDailyReportApp.debtReturn.code')">Code</span>
               <jhi-sort-indicator :current-order="propOrder" :reverse="reverse" :field-name="'code'"></jhi-sort-indicator>
             </th>
+            <th scope="row" v-on:click="changeOrder('notes')">
+              <span v-text="$t('shopDailyReportApp.debtReturn.notes')">Notes</span>
+              <jhi-sort-indicator :current-order="propOrder" :reverse="reverse" :field-name="'notes'"></jhi-sort-indicator>
+            </th>
             <th scope="row" v-on:click="changeOrder('client.id')">
               <span v-text="$t('shopDailyReportApp.debtReturn.client')">Client</span>
               <jhi-sort-indicator :current-order="propOrder" :reverse="reverse" :field-name="'client.id'"></jhi-sort-indicator>
@@ -63,6 +67,7 @@
             <td>{{ debtReturn.returnAmount }}</td>
             <td>{{ debtReturn.returnDate }}</td>
             <td>{{ debtReturn.code }}</td>
+            <td>{{ debtReturn.notes }}</td>
             <td>
               <div v-if="debtReturn.client">
                 <router-link :to="{ name: 'ClientView', params: { clientId: debtReturn.client.id } }">{{

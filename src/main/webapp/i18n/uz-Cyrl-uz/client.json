@@ -3,7 +3,7 @@
     "client": {
       "home": {
         "title": "Clients",
-        "refreshListLabel": "Refresh list",
+        "refreshListLabel": "Yangilash",
         "createLabel": "Янги Client қўшиш",
         "createOrEditLabel": "Clientни таҳрирлаш",
         "notFound": "No Clients found"

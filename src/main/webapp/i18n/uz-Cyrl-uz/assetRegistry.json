@@ -3,7 +3,7 @@
     "assetRegistry": {
       "home": {
         "title": "Asset Registries",
-        "refreshListLabel": "Refresh list",
+        "refreshListLabel": "Yangilash",
         "createLabel": "Янги Asset Registry қўшиш",
         "createOrEditLabel": "Asset Registryни таҳрирлаш",
         "notFound": "No Asset Registries found"

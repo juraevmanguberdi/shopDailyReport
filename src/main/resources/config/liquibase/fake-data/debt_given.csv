@@ -1,11 +1,11 @@
-id;debt_amount;debt_date;return_date;code;client_id
-1;28952;2022-06-15;2022-06-16;JSON;1
-2;6542;2022-06-15;2022-06-16;Future;2
-3;93844;2022-06-16;2022-06-16;Licensed Analyst Florida;3
-4;53309;2022-06-16;2022-06-16;Corporate;4
-5;11385;2022-06-15;2022-06-16;Principal;5
-6;89563;2022-06-15;2022-06-16;Borders program Kyat;6
-7;21990;2022-06-15;2022-06-15;budgetary;7
-8;69999;2022-06-15;2022-06-16;parsing;8
-9;17131;2022-06-15;2022-06-16;hacking Loop Practical;9
-10;84731;2022-06-16;2022-06-16;Cambridgeshire drive Awesome;10
+id;debt_amount;debt_date;return_date;code;notes;client_id
+1;28952;2022-06-15;2022-06-16;JSON;Orchestrator;1
+2;89823;2022-06-16;2022-06-16;embrace Licensed Analyst;Table Metal;2
+3;89647;2022-06-16;2022-06-16;International;Liaison cross-platform Borders;3
+4;71459;2022-06-16;2022-06-16;Barbados mobile budgetary;Administrator parsing Chips;4
+5;98693;2022-06-15;2022-06-16;Loop Practical;Rubber Cambridgeshire drive;5
+6;4339;2022-06-16;2022-06-16;Health Monitored;Salad Lights fuchsia;6
+7;67002;2022-06-16;2022-06-15;Handmade;exploit;7
+8;3907;2022-06-16;2022-06-16;interface Kentucky Solutions;Unbranded;8
+9;7043;2022-06-15;2022-06-15;capacitor pink;Implemented;9
+10;56328;2022-06-16;2022-06-16;withdrawal Agent;SDD;10

@@ -9,6 +9,8 @@
     <!--
         Added the entity ExpenseType.
     -->
+
+
     <changeSet id="20220616183330-1" author="jhipster">
         <createTable tableName="expense_type">
             <column name="id" type="bigint">

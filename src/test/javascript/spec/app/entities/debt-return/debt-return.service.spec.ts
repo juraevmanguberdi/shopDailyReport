@@ -33,7 +33,7 @@ describe('Service Tests', () => {
     beforeEach(() => {
       service = new DebtReturnService();
       currentDate = new Date();
-      elemDefault = new DebtReturn(123, 0, currentDate, 'AAAAAAA');
+      elemDefault = new DebtReturn(123, 0, currentDate, 'AAAAAAA', 'AAAAAAA');
     });
 
     describe('Service methods', () => {
@@ -99,6 +99,7 @@ describe('Service Tests', () => {
             returnAmount: 1,
             returnDate: dayjs(currentDate).format(DATE_FORMAT),
             code: 'BBBBBB',
+            notes: 'BBBBBB',
           },
           elemDefault
         );
@@ -166,6 +167,7 @@ describe('Service Tests', () => {
             returnAmount: 1,
             returnDate: dayjs(currentDate).format(DATE_FORMAT),
             code: 'BBBBBB',
+            notes: 'BBBBBB',
           },
           elemDefault
         );

@@ -31,6 +31,9 @@ public class DebtReturn implements Serializable {
     @Column(name = "code")
     private String code;
 
+    @Column(name = "notes")
+    private String notes;
+
     @ManyToOne(optional = false)
     @NotNull
     private Client client;
@@ -93,6 +96,19 @@ public class DebtReturn implements Serializable {
         this.code = code;
     }
 
+    public String getNotes() {
+        return this.notes;
+    }
+
+    public DebtReturn notes(String notes) {
+        this.setNotes(notes);
+        return this;
+    }
+
+    public void setNotes(String notes) {
+        this.notes = notes;
+    }
+
     public Client getClient() {
         return this.client;
     }
@@ -146,6 +162,7 @@ public class DebtReturn implements Serializable {
             ", returnAmount=" + getReturnAmount() +
             ", returnDate='" + getReturnDate() + "'" +
             ", code='" + getCode() + "'" +
+            ", notes='" + getNotes() + "'" +
             "}";
     }
 }

@@ -23,6 +23,8 @@ public class DebtGivenDTO implements Serializable {
 
     private String code;
 
+    private String notes;
+
     private ClientDTO client;
 
     public Long getId() {
@@ -65,6 +67,14 @@ public class DebtGivenDTO implements Serializable {
         this.code = code;
     }
 
+    public String getNotes() {
+        return notes;
+    }
+
+    public void setNotes(String notes) {
+        this.notes = notes;
+    }
+
     public ClientDTO getClient() {
         return client;
     }
@@ -103,6 +113,7 @@ public class DebtGivenDTO implements Serializable {
             ", debtDate='" + getDebtDate() + "'" +
             ", returnDate='" + getReturnDate() + "'" +
             ", code='" + getCode() + "'" +
+            ", notes='" + getNotes() + "'" +
             ", client=" + getClient() +
             "}";
     }

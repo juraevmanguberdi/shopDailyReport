@@ -46,6 +46,9 @@ class DebtGivenResourceIT {
     private static final String DEFAULT_CODE = "AAAAAAAAAA";
     private static final String UPDATED_CODE = "BBBBBBBBBB";
 
+    private static final String DEFAULT_NOTES = "AAAAAAAAAA";
+    private static final String UPDATED_NOTES = "BBBBBBBBBB";
+
     private static final String ENTITY_API_URL = "/api/debt-givens";
     private static final String ENTITY_API_URL_ID = ENTITY_API_URL + "/{id}";
 
@@ -77,7 +80,8 @@ class DebtGivenResourceIT {
             .debtAmount(DEFAULT_DEBT_AMOUNT)
             .debtDate(DEFAULT_DEBT_DATE)
             .returnDate(DEFAULT_RETURN_DATE)
-            .code(DEFAULT_CODE);
+            .code(DEFAULT_CODE)
+            .notes(DEFAULT_NOTES);
         // Add required entity
         Client client;
         if (TestUtil.findAll(em, Client.class).isEmpty()) {
@@ -102,7 +106,8 @@ class DebtGivenResourceIT {
             .debtAmount(UPDATED_DEBT_AMOUNT)
             .debtDate(UPDATED_DEBT_DATE)
             .returnDate(UPDATED_RETURN_DATE)
-            .code(UPDATED_CODE);
+            .code(UPDATED_CODE)
+            .notes(UPDATED_NOTES);
         // Add required entity
         Client client;
         if (TestUtil.findAll(em, Client.class).isEmpty()) {
@@ -139,6 +144,7 @@ class DebtGivenResourceIT {
         assertThat(testDebtGiven.getDebtDate()).isEqualTo(DEFAULT_DEBT_DATE);
         assertThat(testDebtGiven.getReturnDate()).isEqualTo(DEFAULT_RETURN_DATE);
         assertThat(testDebtGiven.getCode()).isEqualTo(DEFAULT_CODE);
+        assertThat(testDebtGiven.getNotes()).isEqualTo(DEFAULT_NOTES);
     }
 
     @Test
@@ -229,7 +235,8 @@ class DebtGivenResourceIT {
             .andExpect(jsonPath("$.[*].debtAmount").value(hasItem(DEFAULT_DEBT_AMOUNT.intValue())))
             .andExpect(jsonPath("$.[*].debtDate").value(hasItem(DEFAULT_DEBT_DATE.toString())))
             .andExpect(jsonPath("$.[*].returnDate").value(hasItem(DEFAULT_RETURN_DATE.toString())))
-            .andExpect(jsonPath("$.[*].code").value(hasItem(DEFAULT_CODE)));
+            .andExpect(jsonPath("$.[*].code").value(hasItem(DEFAULT_CODE)))
+            .andExpect(jsonPath("$.[*].notes").value(hasItem(DEFAULT_NOTES)));
     }
 
     @Test
@@ -247,7 +254,8 @@ class DebtGivenResourceIT {
             .andExpect(jsonPath("$.debtAmount").value(DEFAULT_DEBT_AMOUNT.intValue()))
             .andExpect(jsonPath("$.debtDate").value(DEFAULT_DEBT_DATE.toString()))
             .andExpect(jsonPath("$.returnDate").value(DEFAULT_RETURN_DATE.toString()))
-            .andExpect(jsonPath("$.code").value(DEFAULT_CODE));
+            .andExpect(jsonPath("$.code").value(DEFAULT_CODE))
+            .andExpect(jsonPath("$.notes").value(DEFAULT_NOTES));
     }
 
     @Test
@@ -269,7 +277,12 @@ class DebtGivenResourceIT {
         DebtGiven updatedDebtGiven = debtGivenRepository.findById(debtGiven.getId()).get();
         // Disconnect from session so that the updates on updatedDebtGiven are not directly saved in db
         em.detach(updatedDebtGiven);
-        updatedDebtGiven.debtAmount(UPDATED_DEBT_AMOUNT).debtDate(UPDATED_DEBT_DATE).returnDate(UPDATED_RETURN_DATE).code(UPDATED_CODE);
+        updatedDebtGiven
+            .debtAmount(UPDATED_DEBT_AMOUNT)
+            .debtDate(UPDATED_DEBT_DATE)
+            .returnDate(UPDATED_RETURN_DATE)
+            .code(UPDATED_CODE)
+            .notes(UPDATED_NOTES);
         DebtGivenDTO debtGivenDTO = debtGivenMapper.toDto(updatedDebtGiven);
 
         restDebtGivenMockMvc
@@ -288,6 +301,7 @@ class DebtGivenResourceIT {
         assertThat(testDebtGiven.getDebtDate()).isEqualTo(UPDATED_DEBT_DATE);
         assertThat(testDebtGiven.getReturnDate()).isEqualTo(UPDATED_RETURN_DATE);
         assertThat(testDebtGiven.getCode()).isEqualTo(UPDATED_CODE);
+        assertThat(testDebtGiven.getNotes()).isEqualTo(UPDATED_NOTES);
     }
 
     @Test
@@ -367,7 +381,7 @@ class DebtGivenResourceIT {
         DebtGiven partialUpdatedDebtGiven = new DebtGiven();
         partialUpdatedDebtGiven.setId(debtGiven.getId());
 
-        partialUpdatedDebtGiven.debtAmount(UPDATED_DEBT_AMOUNT).code(UPDATED_CODE);
+        partialUpdatedDebtGiven.debtAmount(UPDATED_DEBT_AMOUNT).code(UPDATED_CODE).notes(UPDATED_NOTES);
 
         restDebtGivenMockMvc
             .perform(
@@ -385,6 +399,7 @@ class DebtGivenResourceIT {
         assertThat(testDebtGiven.getDebtDate()).isEqualTo(DEFAULT_DEBT_DATE);
         assertThat(testDebtGiven.getReturnDate()).isEqualTo(DEFAULT_RETURN_DATE);
         assertThat(testDebtGiven.getCode()).isEqualTo(UPDATED_CODE);
+        assertThat(testDebtGiven.getNotes()).isEqualTo(UPDATED_NOTES);
     }
 
     @Test
@@ -403,7 +418,8 @@ class DebtGivenResourceIT {
             .debtAmount(UPDATED_DEBT_AMOUNT)
             .debtDate(UPDATED_DEBT_DATE)
             .returnDate(UPDATED_RETURN_DATE)
-            .code(UPDATED_CODE);
+            .code(UPDATED_CODE)
+            .notes(UPDATED_NOTES);
 
         restDebtGivenMockMvc
             .perform(
@@ -421,6 +437,7 @@ class DebtGivenResourceIT {
         assertThat(testDebtGiven.getDebtDate()).isEqualTo(UPDATED_DEBT_DATE);
         assertThat(testDebtGiven.getReturnDate()).isEqualTo(UPDATED_RETURN_DATE);
         assertThat(testDebtGiven.getCode()).isEqualTo(UPDATED_CODE);
+        assertThat(testDebtGiven.getNotes()).isEqualTo(UPDATED_NOTES);
     }
 
     @Test

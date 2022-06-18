@@ -15,6 +15,24 @@
             <input type="text" class="form-control" id="id" name="id" v-model="debtGiven.id" readonly />
           </div>
           <div class="form-group">
+            <label class="form-control-label" v-text="$t('shopDailyReportApp.debtGiven.client')" for="debt-given-client">Client</label>
+            <select class="form-control" id="debt-given-client" data-cy="client" name="client" v-model="debtGiven.client" required>
+              <option v-if="!debtGiven.client" v-bind:value="null" selected></option>
+              <option
+                v-bind:value="debtGiven.client && clientOption.id === debtGiven.client.id ? debtGiven.client : clientOption"
+                v-for="clientOption in clients"
+                :key="clientOption.id"
+              >
+                {{ clientOption.name + " " + clientOption.surName }}
+              </option>
+            </select>
+          </div>
+          <div v-if="$v.debtGiven.client.$anyDirty && $v.debtGiven.client.$invalid">
+            <small class="form-text text-danger" v-if="!$v.debtGiven.client.required" v-text="$t('entity.validation.required')">
+              This field is required.
+            </small>
+          </div>
+          <div class="form-group">
             <label class="form-control-label" v-text="$t('shopDailyReportApp.debtGiven.debtAmount')" for="debt-given-debtAmount"
               >Debt Amount</label
             >
@@ -122,22 +140,16 @@
             />
           </div>
           <div class="form-group">
-            <label class="form-control-label" v-text="$t('shopDailyReportApp.debtGiven.client')" for="debt-given-client">Client</label>
-            <select class="form-control" id="debt-given-client" data-cy="client" name="client" v-model="debtGiven.client" required>
-              <option v-if="!debtGiven.client" v-bind:value="null" selected></option>
-              <option
-                v-bind:value="debtGiven.client && clientOption.id === debtGiven.client.id ? debtGiven.client : clientOption"
-                v-for="clientOption in clients"
-                :key="clientOption.id"
-              >
-                {{ clientOption.id }}
-              </option>
-            </select>
-          </div>
-          <div v-if="$v.debtGiven.client.$anyDirty && $v.debtGiven.client.$invalid">
-            <small class="form-text text-danger" v-if="!$v.debtGiven.client.required" v-text="$t('entity.validation.required')">
-              This field is required.
-            </small>
+            <label class="form-control-label" v-text="$t('shopDailyReportApp.debtGiven.notes')" for="debt-given-notes">Notes</label>
+            <input
+              type="text"
+              class="form-control"
+              name="notes"
+              id="debt-given-notes"
+              data-cy="notes"
+              :class="{ valid: !$v.debtGiven.notes.$invalid, invalid: $v.debtGiven.notes.$invalid }"
+              v-model="$v.debtGiven.notes.$model"
+            />
           </div>
         </div>
         <div>

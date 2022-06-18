@@ -3,7 +3,7 @@
     "ownerExpense": {
       "home": {
         "title": "Owner Expenses",
-        "refreshListLabel": "Refresh list",
+        "refreshListLabel": "Yangilash",
         "createLabel": "Янги Owner Expense қўшиш",
         "createOrEditLabel": "Owner Expenseни таҳрирлаш",
         "notFound": "No Owner Expenses found"

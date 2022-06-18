@@ -31,6 +31,12 @@
             <span>{{ debtGiven.code }}</span>
           </dd>
           <dt>
+            <span v-text="$t('shopDailyReportApp.debtGiven.notes')">Notes</span>
+          </dt>
+          <dd>
+            <span>{{ debtGiven.notes }}</span>
+          </dd>
+          <dt>
             <span v-text="$t('shopDailyReportApp.debtGiven.client')">Client</span>
           </dt>
           <dd>

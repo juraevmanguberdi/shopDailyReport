@@ -6,6 +6,7 @@ export interface IDebtReturn {
   returnAmount?: number;
   returnDate?: Date;
   code?: string | null;
+  notes?: string | null;
   client?: IClient;
   paymentMethod?: IPaymentMethod;
 }
@@ -16,6 +17,7 @@ export class DebtReturn implements IDebtReturn {
     public returnAmount?: number,
     public returnDate?: Date,
     public code?: string | null,
+    public notes?: string | null,
     public client?: IClient,
     public paymentMethod?: IPaymentMethod
   ) {}

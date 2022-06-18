@@ -23,6 +23,7 @@ const validations: any = {
       required,
     },
     code: {},
+    notes: {},
     client: {
       required,
     },

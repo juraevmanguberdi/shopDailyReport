@@ -3,7 +3,7 @@
     "paymentMethod": {
       "home": {
         "title": "Payment Methods",
-        "refreshListLabel": "Refresh list",
+        "refreshListLabel": "Yangilash",
         "createLabel": "Янги Payment Method қўшиш",
         "createOrEditLabel": "Payment Methodни таҳрирлаш",
         "notFound": "No Payment Methods found"

@@ -1,11 +1,11 @@
-id;return_amount;return_date;code;client_id;payment_method_id
-1;55824;2022-06-16;Lari Virginia plum;1;1
-2;4230;2022-06-16;optimize Research;2;2
-3;52778;2022-06-15;Handmade technologies Vista;3;3
-4;84851;2022-06-16;Loan;4;4
-5;83329;2022-06-16;Direct;5;5
-6;11491;2022-06-16;revolutionize pixel;6;6
-7;18905;2022-06-16;Tuna cohesive;7;7
-8;56380;2022-06-16;sexy Orchard;8;8
-9;89082;2022-06-15;Kwacha ADP;9;9
-10;5084;2022-06-16;Account;10;10
+id;return_amount;return_date;code;notes;client_id;payment_method_id
+1;55824;2022-06-16;Lari Virginia plum;Fantastic;1;1
+2;7723;2022-06-15;Licensed solid hack;Salad Bedfordshire;2;2
+3;60744;2022-06-16;contextually-based Metal Loan;models Directives Avon;3;3
+4;57221;2022-06-16;mesh;sexy Orchard;4;4
+5;89082;2022-06-15;Kwacha ADP;Florida;5;5
+6;83676;2022-06-15;Central;COM;6;6
+7;66353;2022-06-16;Rubber enhance orange;Distributed deposit Cook;7;7
+8;46675;2022-06-16;Money hack;Adaptive Division;8;8
+9;23187;2022-06-15;challenge;archive SDD;9;9
+10;52712;2022-06-16;Officer;Buckinghamshire Soft Granite;10;10

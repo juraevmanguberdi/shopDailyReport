@@ -3,7 +3,7 @@
     "ownerExpenseType": {
       "home": {
         "title": "Owner Expense Types",
-        "refreshListLabel": "Refresh list",
+        "refreshListLabel": "Yangilash",
         "createLabel": "Янги Owner Expense Type қўшиш",
         "createOrEditLabel": "Owner Expense Typeни таҳрирлаш",
         "notFound": "No Owner Expense Types found"

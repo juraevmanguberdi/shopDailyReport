@@ -3,7 +3,7 @@
     "assetLive": {
       "home": {
         "title": "Asset Lives",
-        "refreshListLabel": "Refresh list",
+        "refreshListLabel": "Yangilash",
         "createLabel": "Янги Asset Live қўшиш",
         "createOrEditLabel": "Asset Liveни таҳрирлаш",
         "notFound": "No Asset Lives found"

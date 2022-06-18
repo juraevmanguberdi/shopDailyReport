@@ -20,6 +20,8 @@ public class DebtReturnDTO implements Serializable {
 
     private String code;
 
+    private String notes;
+
     private ClientDTO client;
 
     private PaymentMethodDTO paymentMethod;
@@ -54,6 +56,14 @@ public class DebtReturnDTO implements Serializable {
 
     public void setCode(String code) {
         this.code = code;
+    }
+
+    public String getNotes() {
+        return notes;
+    }
+
+    public void setNotes(String notes) {
+        this.notes = notes;
     }
 
     public ClientDTO getClient() {
@@ -101,6 +111,7 @@ public class DebtReturnDTO implements Serializable {
             ", returnAmount=" + getReturnAmount() +
             ", returnDate='" + getReturnDate() + "'" +
             ", code='" + getCode() + "'" +
+            ", notes='" + getNotes() + "'" +
             ", client=" + getClient() +
             ", paymentMethod=" + getPaymentMethod() +
             "}";

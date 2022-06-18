@@ -3,7 +3,7 @@
     "debtReturn": {
       "home": {
         "title": "Debt Returns",
-        "refreshListLabel": "Refresh list",
+        "refreshListLabel": "Yangilash",
         "createLabel": "Янги Debt Return қўшиш",
         "createOrEditLabel": "Debt Returnни таҳрирлаш",
         "notFound": "No Debt Returns found"
@@ -21,6 +21,7 @@
       "returnAmount": "Return Amount",
       "returnDate": "Return Date",
       "code": "Code",
+      "notes": "Notes",
       "client": "Client",
       "paymentMethod": "Payment Method"
     }

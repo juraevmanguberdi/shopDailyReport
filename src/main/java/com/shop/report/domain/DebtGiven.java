@@ -35,6 +35,9 @@ public class DebtGiven implements Serializable {
     @Column(name = "code")
     private String code;
 
+    @Column(name = "notes")
+    private String notes;
+
     @ManyToOne(optional = false)
     @NotNull
     private Client client;
@@ -106,6 +109,19 @@ public class DebtGiven implements Serializable {
         this.code = code;
     }
 
+    public String getNotes() {
+        return this.notes;
+    }
+
+    public DebtGiven notes(String notes) {
+        this.setNotes(notes);
+        return this;
+    }
+
+    public void setNotes(String notes) {
+        this.notes = notes;
+    }
+
     public Client getClient() {
         return this.client;
     }
@@ -147,6 +163,7 @@ public class DebtGiven implements Serializable {
             ", debtDate='" + getDebtDate() + "'" +
             ", returnDate='" + getReturnDate() + "'" +
             ", code='" + getCode() + "'" +
+            ", notes='" + getNotes() + "'" +
             "}";
     }
 }

@@ -6,6 +6,7 @@ export interface IDebtGiven {
   debtDate?: Date;
   returnDate?: Date;
   code?: string | null;
+  notes?: string | null;
   client?: IClient;
 }
 
@@ -16,6 +17,7 @@ export class DebtGiven implements IDebtGiven {
     public debtDate?: Date,
     public returnDate?: Date,
     public code?: string | null,
+    public notes?: string | null,
     public client?: IClient
   ) {}
 }

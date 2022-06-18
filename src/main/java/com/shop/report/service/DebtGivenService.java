@@ -2,15 +2,17 @@ package com.shop.report.service;
 
 import com.shop.report.domain.DebtGiven;
 import com.shop.report.repository.DebtGivenRepository;
+import com.shop.report.service.dto.ClientDTO;
 import com.shop.report.service.dto.DebtGivenDTO;
 import com.shop.report.service.mapper.DebtGivenMapper;
-import java.util.Optional;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
+import java.util.Optional;
 
 /**
  * Service Implementation for managing {@link DebtGiven}.
@@ -25,9 +27,12 @@ public class DebtGivenService {
 
     private final DebtGivenMapper debtGivenMapper;
 
-    public DebtGivenService(DebtGivenRepository debtGivenRepository, DebtGivenMapper debtGivenMapper) {
+    private final ClientService clientService;
+
+    public DebtGivenService(DebtGivenRepository debtGivenRepository, DebtGivenMapper debtGivenMapper, ClientService clientService) {
         this.debtGivenRepository = debtGivenRepository;
         this.debtGivenMapper = debtGivenMapper;
+        this.clientService = clientService;
     }
 
     /**
@@ -40,6 +45,11 @@ public class DebtGivenService {
         log.debug("Request to save DebtGiven : {}", debtGivenDTO);
         DebtGiven debtGiven = debtGivenMapper.toEntity(debtGivenDTO);
         debtGiven = debtGivenRepository.save(debtGiven);
+
+        Optional<ClientDTO> clientDTO = clientService.findOne(debtGivenDTO.getClient().getId());
+        Long debt = debtGivenDTO.getDebtAmount() + clientDTO.get().getDebtAmount();
+        clientDTO.get().setDebtAmount(debt);
+        ClientDTO clientDTOUpdate = clientService.update(clientDTO.get());
         return debtGivenMapper.toDto(debtGiven);
     }
 
@@ -51,8 +61,18 @@ public class DebtGivenService {
      */
     public DebtGivenDTO update(DebtGivenDTO debtGivenDTO) {
         log.debug("Request to save DebtGiven : {}", debtGivenDTO);
+        Optional<ClientDTO> clientDTO = clientService.findOne(debtGivenDTO.getClient().getId());
+        Long debt;
+        debt = clientDTO.get().getDebtAmount() + debtGivenDTO.getDebtAmount();
+
+        Optional<DebtGivenDTO> debtGivenDTOFind = findOne(debtGivenDTO.getId());
+        debt = debt - debtGivenDTOFind.get().getDebtAmount();
+
         DebtGiven debtGiven = debtGivenMapper.toEntity(debtGivenDTO);
         debtGiven = debtGivenRepository.save(debtGiven);
+
+        clientDTO.get().setDebtAmount(debt);
+        ClientDTO clientDTOUpdate = clientService.update(clientDTO.get());
         return debtGivenMapper.toDto(debtGiven);
     }
 
@@ -66,14 +86,14 @@ public class DebtGivenService {
         log.debug("Request to partially update DebtGiven : {}", debtGivenDTO);
 
         return debtGivenRepository
-            .findById(debtGivenDTO.getId())
-            .map(existingDebtGiven -> {
-                debtGivenMapper.partialUpdate(existingDebtGiven, debtGivenDTO);
+          .findById(debtGivenDTO.getId())
+          .map(existingDebtGiven -> {
+              debtGivenMapper.partialUpdate(existingDebtGiven, debtGivenDTO);
 
-                return existingDebtGiven;
-            })
-            .map(debtGivenRepository::save)
-            .map(debtGivenMapper::toDto);
+              return existingDebtGiven;
+          })
+          .map(debtGivenRepository::save)
+          .map(debtGivenMapper::toDto);
     }
 
     /**

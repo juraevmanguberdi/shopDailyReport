@@ -3,7 +3,7 @@
     "expense": {
       "home": {
         "title": "Expenses",
-        "refreshListLabel": "Refresh list",
+        "refreshListLabel": "Yangilash",
         "createLabel": "Янги Expense қўшиш",
         "createOrEditLabel": "Expenseни таҳрирлаш",
         "notFound": "No Expenses found"

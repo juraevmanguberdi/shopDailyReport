@@ -2,7 +2,7 @@
   "userManagement": {
     "home": {
       "title": "Фойдаланувчи",
-      "refreshListLabel": "Refresh list",
+      "refreshListLabel": "Yangilash",
       "createLabel": "Янги фойдаланувчи қўшиш",
       "createOrEditLabel": "Фойдаланувчини таҳрирлаш"
     },
