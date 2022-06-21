@@ -76,13 +76,13 @@
       "hits": "Мос келди",
       "misses": "Мос келмади",
       "gets": "Кеш олишлар",
-      "puts": "Кеш қўшишлар",
+      "puts": "Кеш qo'shishлар",
       "removals": "Кеш ўчиришлар",
       "evictions": "Тозаланганлар сони",
       "hitPercent": "Мос келди %",
       "missPercent": "Мос келмади %",
       "averageGetTime": "Ўртача олиш вақти (µs)",
-      "averagePutTime": "Ўртача қўшиш вақти (µs)",
+      "averagePutTime": "Ўртача qo'shish вақти (µs)",
       "averageRemoveTime": "Ўртача ўчириш вақти (µs)"
     },
     "datasource": {

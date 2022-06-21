@@ -1,0 +1,33 @@
+entity RequiredProduct {
+  name String required,
+  note String,
+  code String,
+}
+entity RequiredProductType {
+  name String required,
+  code String,
+  notes String,
+}
+entity BorrowedDebt {
+  amount Long required,
+  notes String,
+  code String,
+  date LocalDate,
+
+}
+entity BorrowedDebtType {
+  name String required,
+  code String,
+  notes String,
+  createdDate LocalDate,
+}
+relationship ManyToOne {
+  BorrowedDebt{BorrowedDebtType required} to BorrowedDebtType
+  RequiredProduct{RequiredProductType required} to RequiredProductType
+}
+
+paginate * with pagination
+
+dto * with mapstruct
+
+service * with serviceClass

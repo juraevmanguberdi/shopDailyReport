@@ -23,7 +23,7 @@
                 v-for="clientOption in clients"
                 :key="clientOption.id"
               >
-                {{ clientOption.name + " " + clientOption.surName }}
+                {{ clientOption.name + " " + clientOption.surName +". Qarz: " + clientOption.debtAmount }}
               </option>
             </select>
           </div>

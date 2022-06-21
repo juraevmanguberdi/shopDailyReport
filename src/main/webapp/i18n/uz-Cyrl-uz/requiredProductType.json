@@ -1,0 +1,26 @@
+{
+  "shopDailyReportApp": {
+    "requiredProductType": {
+      "home": {
+        "title": "Required Product Types",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Янги Required Product Type қўшиш",
+        "createOrEditLabel": "Required Product Typeни таҳрирлаш",
+        "notFound": "No Required Product Types found"
+      },
+      "created": "Required Product Type {{ param }} билан қўшилди.",
+      "updated": "{{ param }}- Required Product Type сақланди.",
+      "deleted": "{{ param }}- Required Product Type ўчирилди.",
+      "delete": {
+        "question": "{{ id }}- Required Product Typeни ўчирмоқчимисиз? "
+      },
+      "detail": {
+        "title": "Required Product Type"
+      },
+      "id": "ID",
+      "name": "Name",
+      "code": "Code",
+      "notes": "Notes"
+    }
+  }
+}

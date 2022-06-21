@@ -36,10 +36,6 @@
       <font-awesome-icon icon="asterisk" />
       <span v-text="$t('global.menu.entities.paymentMethod')">Payment Method</span>
     </b-dropdown-item>
-    <b-dropdown-item to="/asset-live">
-      <font-awesome-icon icon="asterisk" />
-      <span v-text="$t('global.menu.entities.assetLive')">Asset Live</span>
-    </b-dropdown-item>
     <b-dropdown-item to="/asset-registry">
       <font-awesome-icon icon="asterisk" />
       <span v-text="$t('global.menu.entities.assetRegistry')">Asset Registry</span>
@@ -48,9 +44,21 @@
       <font-awesome-icon icon="asterisk" />
       <span v-text="$t('global.menu.entities.liabilityRegistry')">Liability Registry</span>
     </b-dropdown-item>
-    <b-dropdown-item to="/liability-live">
+    <b-dropdown-item to="/required-product">
       <font-awesome-icon icon="asterisk" />
-      <span v-text="$t('global.menu.entities.liabilityLive')">Liability Live</span>
+      <span v-text="$t('global.menu.entities.requiredProduct')">Required Product</span>
+    </b-dropdown-item>
+    <b-dropdown-item to="/required-product-type">
+      <font-awesome-icon icon="asterisk" />
+      <span v-text="$t('global.menu.entities.requiredProductType')">Required Product Type</span>
+    </b-dropdown-item>
+    <b-dropdown-item to="/borrowed-debt">
+      <font-awesome-icon icon="asterisk" />
+      <span v-text="$t('global.menu.entities.borrowedDebt')">Borrowed Debt</span>
+    </b-dropdown-item>
+    <b-dropdown-item to="/borrowed-debt-type">
+      <font-awesome-icon icon="asterisk" />
+      <span v-text="$t('global.menu.entities.borrowedDebtType')">Borrowed Debt Type</span>
     </b-dropdown-item>
     <!-- jhipster-needle-add-entity-to-menu - JHipster will add entities to the menu here -->
   </div>

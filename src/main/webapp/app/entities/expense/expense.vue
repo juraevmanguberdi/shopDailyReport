@@ -32,6 +32,10 @@
               <span v-text="$t('global.field.id')">ID</span>
               <jhi-sort-indicator :current-order="propOrder" :reverse="reverse" :field-name="'id'"></jhi-sort-indicator>
             </th>
+            <th scope="row" v-on:click="changeOrder('expenseType.id')">
+              <span v-text="$t('shopDailyReportApp.expense.expenseType')">Expense Type</span>
+              <jhi-sort-indicator :current-order="propOrder" :reverse="reverse" :field-name="'expenseType.id'"></jhi-sort-indicator>
+            </th>
             <th scope="row" v-on:click="changeOrder('amount')">
               <span v-text="$t('shopDailyReportApp.expense.amount')">Amount</span>
               <jhi-sort-indicator :current-order="propOrder" :reverse="reverse" :field-name="'amount'"></jhi-sort-indicator>
@@ -48,10 +52,6 @@
               <span v-text="$t('shopDailyReportApp.expense.code')">Code</span>
               <jhi-sort-indicator :current-order="propOrder" :reverse="reverse" :field-name="'code'"></jhi-sort-indicator>
             </th>
-            <th scope="row" v-on:click="changeOrder('expenseType.id')">
-              <span v-text="$t('shopDailyReportApp.expense.expenseType')">Expense Type</span>
-              <jhi-sort-indicator :current-order="propOrder" :reverse="reverse" :field-name="'expenseType.id'"></jhi-sort-indicator>
-            </th>
             <th scope="row"></th>
           </tr>
         </thead>
@@ -60,17 +60,18 @@
             <td>
               <router-link :to="{ name: 'ExpenseView', params: { expenseId: expense.id } }">{{ expense.id }}</router-link>
             </td>
+            <td>
+              <div v-if="expense.expenseType">
+                <router-link :to="{ name: 'ExpenseTypeView', params: { expenseTypeId: expense.expenseType.id } }">{{
+                    expense.expenseType.name
+                  }}</router-link>
+              </div>
+            </td>
             <td>{{ expense.amount }}</td>
             <td>{{ expense.expenseDate }}</td>
             <td>{{ expense.notes }}</td>
             <td>{{ expense.code }}</td>
-            <td>
-              <div v-if="expense.expenseType">
-                <router-link :to="{ name: 'ExpenseTypeView', params: { expenseTypeId: expense.expenseType.id } }">{{
-                  expense.expenseType.id
-                }}</router-link>
-              </div>
-            </td>
+
             <td class="text-right">
               <div class="btn-group">
                 <router-link :to="{ name: 'ExpenseView', params: { expenseId: expense.id } }" custom v-slot="{ navigate }">

@@ -4,13 +4,13 @@
       "home": {
         "title": "Owner Expenses",
         "refreshListLabel": "Yangilash",
-        "createLabel": "Янги Owner Expense қўшиш",
-        "createOrEditLabel": "Owner Expenseни таҳрирлаш",
-        "notFound": "No Owner Expenses found"
+        "createLabel": "Yangi Owner Expense qo'shish",
+        "createOrEditLabel": "Owner Expenseni tahrirlash",
+        "notFound": "Owner Expenselar topilmadi"
       },
-      "created": "Owner Expense {{ param }} билан қўшилди.",
-      "updated": "{{ param }}- Owner Expense сақланди.",
-      "deleted": "{{ param }}- Owner Expense ўчирилди.",
+      "created": "Owner Expense {{ param }} bilan qo'shildi.",
+      "updated": "{{ param }}- Owner Expense saqlandi.",
+      "deleted": "{{ param }}- Owner Expense o'chirildi.",
       "delete": {
         "question": "{{ id }}- Owner Expenseни ўчирмоқчимисиз? "
       },

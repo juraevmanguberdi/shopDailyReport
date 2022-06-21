@@ -14,9 +14,29 @@
             <label for="id" v-text="$t('global.field.id')">ID</label>
             <input type="text" class="form-control" id="id" name="id" v-model="debtReturn.id" readonly />
           </div>
+
+
+          <div class="form-group">
+            <label class="form-control-label" v-text="$t('shopDailyReportApp.debtReturn.client')" for="debt-return-client">Client</label>
+            <select class="form-control" id="debt-return-client" data-cy="client" name="client" v-model="debtReturn.client" required>
+              <option v-if="!debtReturn.client" v-bind:value="null" selected></option>
+              <option
+                v-bind:value="debtReturn.client && clientOption.id === debtReturn.client.id ? debtReturn.client : clientOption"
+                v-for="clientOption in clients"
+                :key="clientOption.id"
+              >
+                {{ clientOption.surName + " " + clientOption.name +". Qarz: " + clientOption.debtAmount}}
+              </option>
+            </select>
+          </div>
+          <div v-if="$v.debtReturn.client.$anyDirty && $v.debtReturn.client.$invalid">
+            <small class="form-text text-danger" v-if="!$v.debtReturn.client.required" v-text="$t('entity.validation.required')">
+              This field is required.
+            </small>
+          </div>
           <div class="form-group">
             <label class="form-control-label" v-text="$t('shopDailyReportApp.debtReturn.returnAmount')" for="debt-return-returnAmount"
-              >Return Amount</label
+            >Return Amount</label
             >
             <input
               type="number"
@@ -37,6 +57,38 @@
               </small>
             </div>
           </div>
+          <div class="form-group">
+            <label class="form-control-label" v-text="$t('shopDailyReportApp.debtReturn.paymentMethod')" for="debt-return-paymentMethod"
+            >Payment Method</label
+            >
+            <select
+              class="form-control"
+              id="debt-return-paymentMethod"
+              data-cy="paymentMethod"
+              name="paymentMethod"
+              v-model="debtReturn.paymentMethod"
+              required
+            >
+              <option v-if="!debtReturn.paymentMethod" v-bind:value="null" selected></option>
+              <option
+                v-bind:value="
+                  debtReturn.paymentMethod && paymentMethodOption.id === debtReturn.paymentMethod.id
+                    ? debtReturn.paymentMethod
+                    : paymentMethodOption
+                "
+                v-for="paymentMethodOption in paymentMethods"
+                :key="paymentMethodOption.id"
+              >
+                {{ paymentMethodOption.name }}
+              </option>
+            </select>
+          </div>
+          <div v-if="$v.debtReturn.paymentMethod.$anyDirty && $v.debtReturn.paymentMethod.$invalid">
+            <small class="form-text text-danger" v-if="!$v.debtReturn.paymentMethod.required" v-text="$t('entity.validation.required')">
+              This field is required.
+            </small>
+          </div>
+
           <div class="form-group">
             <label class="form-control-label" v-text="$t('shopDailyReportApp.debtReturn.returnDate')" for="debt-return-returnDate"
               >Return Date</label
@@ -97,55 +149,8 @@
               v-model="$v.debtReturn.notes.$model"
             />
           </div>
-          <div class="form-group">
-            <label class="form-control-label" v-text="$t('shopDailyReportApp.debtReturn.client')" for="debt-return-client">Client</label>
-            <select class="form-control" id="debt-return-client" data-cy="client" name="client" v-model="debtReturn.client" required>
-              <option v-if="!debtReturn.client" v-bind:value="null" selected></option>
-              <option
-                v-bind:value="debtReturn.client && clientOption.id === debtReturn.client.id ? debtReturn.client : clientOption"
-                v-for="clientOption in clients"
-                :key="clientOption.id"
-              >
-                {{ clientOption.id }}
-              </option>
-            </select>
-          </div>
-          <div v-if="$v.debtReturn.client.$anyDirty && $v.debtReturn.client.$invalid">
-            <small class="form-text text-danger" v-if="!$v.debtReturn.client.required" v-text="$t('entity.validation.required')">
-              This field is required.
-            </small>
-          </div>
-          <div class="form-group">
-            <label class="form-control-label" v-text="$t('shopDailyReportApp.debtReturn.paymentMethod')" for="debt-return-paymentMethod"
-              >Payment Method</label
-            >
-            <select
-              class="form-control"
-              id="debt-return-paymentMethod"
-              data-cy="paymentMethod"
-              name="paymentMethod"
-              v-model="debtReturn.paymentMethod"
-              required
-            >
-              <option v-if="!debtReturn.paymentMethod" v-bind:value="null" selected></option>
-              <option
-                v-bind:value="
-                  debtReturn.paymentMethod && paymentMethodOption.id === debtReturn.paymentMethod.id
-                    ? debtReturn.paymentMethod
-                    : paymentMethodOption
-                "
-                v-for="paymentMethodOption in paymentMethods"
-                :key="paymentMethodOption.id"
-              >
-                {{ paymentMethodOption.id }}
-              </option>
-            </select>
-          </div>
-          <div v-if="$v.debtReturn.paymentMethod.$anyDirty && $v.debtReturn.paymentMethod.$invalid">
-            <small class="form-text text-danger" v-if="!$v.debtReturn.paymentMethod.required" v-text="$t('entity.validation.required')">
-              This field is required.
-            </small>
-          </div>
+
+
         </div>
         <div>
           <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" v-on:click="previousState()">

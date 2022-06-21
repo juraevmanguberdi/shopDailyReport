@@ -2,26 +2,26 @@
   "shopDailyReportApp": {
     "expenseType": {
       "home": {
-        "title": "Expense Types",
+        "title": "Xarajat turlari",
         "refreshListLabel": "Yangilash",
-        "createLabel": "Янги Expense Type қўшиш",
-        "createOrEditLabel": "Expense Typeни таҳрирлаш",
-        "notFound": "No Expense Types found"
+        "createLabel": "Yangi xarajat turi qo'shish",
+        "createOrEditLabel": "Xarajat turini tahrirlash",
+        "notFound": "Xarajat turilar topilmadi"
       },
-      "created": "Expense Type {{ param }} билан қўшилди.",
-      "updated": "{{ param }}- Expense Type сақланди.",
-      "deleted": "{{ param }}- Expense Type ўчирилди.",
+      "created": "Xarajat turin {{ param }} bilan qo'shildi.",
+      "updated": "{{ param }}- Xarajat turi saqlandi.",
+      "deleted": "{{ param }}- Xarajat turi o'chirildi.",
       "delete": {
-        "question": "{{ id }}- Expense Typeни ўчирмоқчимисиз? "
+        "question": "{{ id }}- Xarajat turiни ўчирмоқчимисиз? "
       },
       "detail": {
-        "title": "Expense Type"
+        "title": "Xarajat turi"
       },
       "id": "ID",
-      "name": "Name",
+      "name": "Nomi",
       "code": "Code",
-      "notes": "Notes",
-      "createdDate": "Created Date"
+      "notes": "Qo'shimcha ma'lumot",
+      "createdDate": "Yaratilgan kuni"
     }
   }
 }

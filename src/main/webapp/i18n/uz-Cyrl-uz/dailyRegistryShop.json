@@ -2,29 +2,29 @@
   "shopDailyReportApp": {
     "dailyRegistryShop": {
       "home": {
-        "title": "Daily Registry Shops",
+        "title": "Hisob-kitob",
         "refreshListLabel": "Yangilash",
-        "createLabel": "Янги Daily Registry Shop қўшиш",
-        "createOrEditLabel": "Daily Registry Shopни таҳрирлаш",
-        "notFound": "No Daily Registry Shops found"
+        "createLabel": "Yangisini qo'shish",
+        "createOrEditLabel": "Hisob-kitobni tahrirlash",
+        "notFound": "Hisob-kitoblar topilmadi"
       },
-      "created": "Daily Registry Shop {{ param }} билан қўшилди.",
-      "updated": "{{ param }}- Daily Registry Shop сақланди.",
-      "deleted": "{{ param }}- Daily Registry Shop ўчирилди.",
+      "created": "{{ param }} bilan qo'shildi.",
+      "updated": "{{ param }}- Saqlandi.",
+      "deleted": "{{ param }}- o'chirildi.",
       "delete": {
-        "question": "{{ id }}- Daily Registry Shopни ўчирмоқчимисиз? "
+        "question": "{{ id }}- Hisob-kitobни ўчирмоқчимисиз? "
       },
       "detail": {
-        "title": "Daily Registry Shop"
+        "title": "Kunlik Hisob-kitob"
       },
       "id": "ID",
-      "today": "Today",
-      "sales": "Sales",
-      "goods": "Goods",
+      "today": "Sana",
+      "sales": "Programmada savdo",
+      "goods": "Programmada tovar qoldig'i",
       "cashShop": "Cash Shop",
       "click": "Click",
       "terminal": "Terminal",
-      "debtReturn": "Debt Return",
+      "debtReturn": "Qaytarilgan qarzlar",
       "debtGiven": "Debt Given",
       "expense": "Expense",
       "balance": "Balance",

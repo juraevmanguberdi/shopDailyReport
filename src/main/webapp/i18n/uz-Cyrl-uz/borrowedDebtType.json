@@ -1,0 +1,27 @@
+{
+  "shopDailyReportApp": {
+    "borrowedDebtType": {
+      "home": {
+        "title": "Borrowed Debt Types",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Янги Borrowed Debt Type қўшиш",
+        "createOrEditLabel": "Borrowed Debt Typeни таҳрирлаш",
+        "notFound": "No Borrowed Debt Types found"
+      },
+      "created": "Borrowed Debt Type {{ param }} билан қўшилди.",
+      "updated": "{{ param }}- Borrowed Debt Type сақланди.",
+      "deleted": "{{ param }}- Borrowed Debt Type ўчирилди.",
+      "delete": {
+        "question": "{{ id }}- Borrowed Debt Typeни ўчирмоқчимисиз? "
+      },
+      "detail": {
+        "title": "Borrowed Debt Type"
+      },
+      "id": "ID",
+      "name": "Name",
+      "code": "Code",
+      "notes": "Notes",
+      "createdDate": "Created Date"
+    }
+  }
+}

@@ -4,13 +4,13 @@
       "home": {
         "title": "Owner Expense Types",
         "refreshListLabel": "Yangilash",
-        "createLabel": "Янги Owner Expense Type қўшиш",
-        "createOrEditLabel": "Owner Expense Typeни таҳрирлаш",
-        "notFound": "No Owner Expense Types found"
+        "createLabel": "Yangi Owner Expense Type qo'shish",
+        "createOrEditLabel": "Owner Expense Typeni tahrirlash",
+        "notFound": "Owner Expense Typelar topilmadi"
       },
-      "created": "Owner Expense Type {{ param }} билан қўшилди.",
-      "updated": "{{ param }}- Owner Expense Type сақланди.",
-      "deleted": "{{ param }}- Owner Expense Type ўчирилди.",
+      "created": "Owner Expense Type {{ param }} bilan qo'shildi.",
+      "updated": "{{ param }}- Owner Expense Type saqlandi.",
+      "deleted": "{{ param }}- Owner Expense Type o'chirildi.",
       "delete": {
         "question": "{{ id }}- Owner Expense Typeни ўчирмоқчимисиз? "
       },
@@ -18,7 +18,7 @@
         "title": "Owner Expense Type"
       },
       "id": "ID",
-      "name": "Name",
+      "name": "Ism",
       "code": "Code",
       "notes": "Notes",
       "createdDate": "Created Date"

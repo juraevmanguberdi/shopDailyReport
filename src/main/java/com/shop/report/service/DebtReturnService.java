@@ -2,6 +2,8 @@ package com.shop.report.service;
 
 import com.shop.report.domain.DebtReturn;
 import com.shop.report.repository.DebtReturnRepository;
+import com.shop.report.service.dto.ClientDTO;
+import com.shop.report.service.dto.DebtGivenDTO;
 import com.shop.report.service.dto.DebtReturnDTO;
 import com.shop.report.service.mapper.DebtReturnMapper;
 import java.util.Optional;
@@ -25,9 +27,12 @@ public class DebtReturnService {
 
     private final DebtReturnMapper debtReturnMapper;
 
-    public DebtReturnService(DebtReturnRepository debtReturnRepository, DebtReturnMapper debtReturnMapper) {
+    private final ClientService clientService;
+
+    public DebtReturnService(DebtReturnRepository debtReturnRepository, DebtReturnMapper debtReturnMapper, ClientService clientService) {
         this.debtReturnRepository = debtReturnRepository;
         this.debtReturnMapper = debtReturnMapper;
+        this.clientService = clientService;
     }
 
     /**
@@ -40,6 +45,12 @@ public class DebtReturnService {
         log.debug("Request to save DebtReturn : {}", debtReturnDTO);
         DebtReturn debtReturn = debtReturnMapper.toEntity(debtReturnDTO);
         debtReturn = debtReturnRepository.save(debtReturn);
+
+        Optional<ClientDTO> clientDTO = clientService.findOne(debtReturnDTO.getClient().getId());
+        Long debt = clientDTO.get().getDebtAmount() - debtReturnDTO.getReturnAmount() ;
+        clientDTO.get().setDebtAmount(debt);
+        ClientDTO clientDTOUpdate = clientService.update(clientDTO.get());
+
         return debtReturnMapper.toDto(debtReturn);
     }
 
@@ -51,8 +62,18 @@ public class DebtReturnService {
      */
     public DebtReturnDTO update(DebtReturnDTO debtReturnDTO) {
         log.debug("Request to save DebtReturn : {}", debtReturnDTO);
+        Optional<ClientDTO> clientDTO = clientService.findOne(debtReturnDTO.getClient().getId());
+        Long debt;
+        debt = clientDTO.get().getDebtAmount() - debtReturnDTO.getReturnAmount();
+
+        Optional<DebtReturnDTO> debtReturnDTOFind = findOne(debtReturnDTO.getId());
+        debt = debt + debtReturnDTOFind.get().getReturnAmount();
+
         DebtReturn debtReturn = debtReturnMapper.toEntity(debtReturnDTO);
         debtReturn = debtReturnRepository.save(debtReturn);
+
+        clientDTO.get().setDebtAmount(debt);
+        ClientDTO clientDTOUpdate = clientService.update(clientDTO.get());
         return debtReturnMapper.toDto(debtReturn);
     }
 

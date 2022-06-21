@@ -58,12 +58,6 @@ const PaymentMethodUpdate = () => import('@/entities/payment-method/payment-meth
 // prettier-ignore
 const PaymentMethodDetails = () => import('@/entities/payment-method/payment-method-details.vue');
 // prettier-ignore
-const AssetLive = () => import('@/entities/asset-live/asset-live.vue');
-// prettier-ignore
-const AssetLiveUpdate = () => import('@/entities/asset-live/asset-live-update.vue');
-// prettier-ignore
-const AssetLiveDetails = () => import('@/entities/asset-live/asset-live-details.vue');
-// prettier-ignore
 const AssetRegistry = () => import('@/entities/asset-registry/asset-registry.vue');
 // prettier-ignore
 const AssetRegistryUpdate = () => import('@/entities/asset-registry/asset-registry-update.vue');
@@ -76,11 +70,29 @@ const LiabilityRegistryUpdate = () => import('@/entities/liability-registry/liab
 // prettier-ignore
 const LiabilityRegistryDetails = () => import('@/entities/liability-registry/liability-registry-details.vue');
 // prettier-ignore
-const LiabilityLive = () => import('@/entities/liability-live/liability-live.vue');
+const RequiredProduct = () => import('@/entities/required-product/required-product.vue');
 // prettier-ignore
-const LiabilityLiveUpdate = () => import('@/entities/liability-live/liability-live-update.vue');
+const RequiredProductUpdate = () => import('@/entities/required-product/required-product-update.vue');
 // prettier-ignore
-const LiabilityLiveDetails = () => import('@/entities/liability-live/liability-live-details.vue');
+const RequiredProductDetails = () => import('@/entities/required-product/required-product-details.vue');
+// prettier-ignore
+const RequiredProductType = () => import('@/entities/required-product-type/required-product-type.vue');
+// prettier-ignore
+const RequiredProductTypeUpdate = () => import('@/entities/required-product-type/required-product-type-update.vue');
+// prettier-ignore
+const RequiredProductTypeDetails = () => import('@/entities/required-product-type/required-product-type-details.vue');
+// prettier-ignore
+const BorrowedDebt = () => import('@/entities/borrowed-debt/borrowed-debt.vue');
+// prettier-ignore
+const BorrowedDebtUpdate = () => import('@/entities/borrowed-debt/borrowed-debt-update.vue');
+// prettier-ignore
+const BorrowedDebtDetails = () => import('@/entities/borrowed-debt/borrowed-debt-details.vue');
+// prettier-ignore
+const BorrowedDebtType = () => import('@/entities/borrowed-debt-type/borrowed-debt-type.vue');
+// prettier-ignore
+const BorrowedDebtTypeUpdate = () => import('@/entities/borrowed-debt-type/borrowed-debt-type-update.vue');
+// prettier-ignore
+const BorrowedDebtTypeDetails = () => import('@/entities/borrowed-debt-type/borrowed-debt-type-details.vue');
 // jhipster-needle-add-entity-to-router-import - JHipster will import entities to the router here
 
 export default {
@@ -304,30 +316,6 @@ export default {
       meta: { authorities: [Authority.USER] },
     },
     {
-      path: 'asset-live',
-      name: 'AssetLive',
-      component: AssetLive,
-      meta: { authorities: [Authority.USER] },
-    },
-    {
-      path: 'asset-live/new',
-      name: 'AssetLiveCreate',
-      component: AssetLiveUpdate,
-      meta: { authorities: [Authority.USER] },
-    },
-    {
-      path: 'asset-live/:assetLiveId/edit',
-      name: 'AssetLiveEdit',
-      component: AssetLiveUpdate,
-      meta: { authorities: [Authority.USER] },
-    },
-    {
-      path: 'asset-live/:assetLiveId/view',
-      name: 'AssetLiveView',
-      component: AssetLiveDetails,
-      meta: { authorities: [Authority.USER] },
-    },
-    {
       path: 'asset-registry',
       name: 'AssetRegistry',
       component: AssetRegistry,
@@ -376,27 +364,99 @@ export default {
       meta: { authorities: [Authority.USER] },
     },
     {
-      path: 'liability-live',
-      name: 'LiabilityLive',
-      component: LiabilityLive,
+      path: 'required-product',
+      name: 'RequiredProduct',
+      component: RequiredProduct,
       meta: { authorities: [Authority.USER] },
     },
     {
-      path: 'liability-live/new',
-      name: 'LiabilityLiveCreate',
-      component: LiabilityLiveUpdate,
+      path: 'required-product/new',
+      name: 'RequiredProductCreate',
+      component: RequiredProductUpdate,
       meta: { authorities: [Authority.USER] },
     },
     {
-      path: 'liability-live/:liabilityLiveId/edit',
-      name: 'LiabilityLiveEdit',
-      component: LiabilityLiveUpdate,
+      path: 'required-product/:requiredProductId/edit',
+      name: 'RequiredProductEdit',
+      component: RequiredProductUpdate,
       meta: { authorities: [Authority.USER] },
     },
     {
-      path: 'liability-live/:liabilityLiveId/view',
-      name: 'LiabilityLiveView',
-      component: LiabilityLiveDetails,
+      path: 'required-product/:requiredProductId/view',
+      name: 'RequiredProductView',
+      component: RequiredProductDetails,
+      meta: { authorities: [Authority.USER] },
+    },
+    {
+      path: 'required-product-type',
+      name: 'RequiredProductType',
+      component: RequiredProductType,
+      meta: { authorities: [Authority.USER] },
+    },
+    {
+      path: 'required-product-type/new',
+      name: 'RequiredProductTypeCreate',
+      component: RequiredProductTypeUpdate,
+      meta: { authorities: [Authority.USER] },
+    },
+    {
+      path: 'required-product-type/:requiredProductTypeId/edit',
+      name: 'RequiredProductTypeEdit',
+      component: RequiredProductTypeUpdate,
+      meta: { authorities: [Authority.USER] },
+    },
+    {
+      path: 'required-product-type/:requiredProductTypeId/view',
+      name: 'RequiredProductTypeView',
+      component: RequiredProductTypeDetails,
+      meta: { authorities: [Authority.USER] },
+    },
+    {
+      path: 'borrowed-debt',
+      name: 'BorrowedDebt',
+      component: BorrowedDebt,
+      meta: { authorities: [Authority.USER] },
+    },
+    {
+      path: 'borrowed-debt/new',
+      name: 'BorrowedDebtCreate',
+      component: BorrowedDebtUpdate,
+      meta: { authorities: [Authority.USER] },
+    },
+    {
+      path: 'borrowed-debt/:borrowedDebtId/edit',
+      name: 'BorrowedDebtEdit',
+      component: BorrowedDebtUpdate,
+      meta: { authorities: [Authority.USER] },
+    },
+    {
+      path: 'borrowed-debt/:borrowedDebtId/view',
+      name: 'BorrowedDebtView',
+      component: BorrowedDebtDetails,
+      meta: { authorities: [Authority.USER] },
+    },
+    {
+      path: 'borrowed-debt-type',
+      name: 'BorrowedDebtType',
+      component: BorrowedDebtType,
+      meta: { authorities: [Authority.USER] },
+    },
+    {
+      path: 'borrowed-debt-type/new',
+      name: 'BorrowedDebtTypeCreate',
+      component: BorrowedDebtTypeUpdate,
+      meta: { authorities: [Authority.USER] },
+    },
+    {
+      path: 'borrowed-debt-type/:borrowedDebtTypeId/edit',
+      name: 'BorrowedDebtTypeEdit',
+      component: BorrowedDebtTypeUpdate,
+      meta: { authorities: [Authority.USER] },
+    },
+    {
+      path: 'borrowed-debt-type/:borrowedDebtTypeId/view',
+      name: 'BorrowedDebtTypeView',
+      component: BorrowedDebtTypeDetails,
       meta: { authorities: [Authority.USER] },
     },
     // jhipster-needle-add-entity-to-router - JHipster will add entities to the router here

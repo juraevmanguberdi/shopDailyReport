@@ -4,13 +4,13 @@
       "home": {
         "title": "Qarzga savdo qilinganlar",
         "refreshListLabel": "Yangilash",
-        "createLabel": "Янги qarz қўшиш",
-        "createOrEditLabel": "Qarzни таҳрирлаш",
+        "createLabel": "Yangi qarz qo'shish",
+        "createOrEditLabel": "Qarzni tahrirlash",
         "notFound": "Qarzlar yo'q"
       },
-      "created": "Qarz {{ param }} билан қўшилди.",
-      "updated": "{{ param }}- Qarz сақланди.",
-      "deleted": "{{ param }}- Qarz  ўчирилди.",
+      "created": "Qarz {{ param }} bilan qo'shildi.",
+      "updated": "{{ param }}- Qarz saqlandi.",
+      "deleted": "{{ param }}- Qarz  o'chirildi.",
       "delete": {
         "question": "{{ id }}- Qarzни ўчирмоқчимисиз? "
       },

@@ -4,13 +4,13 @@
       "home": {
         "title": "Payment Methods",
         "refreshListLabel": "Yangilash",
-        "createLabel": "Янги Payment Method қўшиш",
-        "createOrEditLabel": "Payment Methodни таҳрирлаш",
-        "notFound": "No Payment Methods found"
+        "createLabel": "Yangi Payment Method qo'shish",
+        "createOrEditLabel": "Payment Methodni tahrirlash",
+        "notFound": "Payment Methodlar topilmadi"
       },
-      "created": "Payment Method {{ param }} билан қўшилди.",
-      "updated": "{{ param }}- Payment Method сақланди.",
-      "deleted": "{{ param }}- Payment Method ўчирилди.",
+      "created": "Payment Method {{ param }} bilan qo'shildi.",
+      "updated": "{{ param }}- Payment Method saqlandi.",
+      "deleted": "{{ param }}- Payment Method o'chirildi.",
       "delete": {
         "question": "{{ id }}- Payment Methodни ўчирмоқчимисиз? "
       },
@@ -18,7 +18,7 @@
         "title": "Payment Method"
       },
       "id": "ID",
-      "name": "Name",
+      "name": "Ism",
       "code": "Code",
       "note": "Note"
     }

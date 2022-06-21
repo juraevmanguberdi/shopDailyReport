@@ -1,0 +1,28 @@
+{
+  "shopDailyReportApp": {
+    "borrowedDebt": {
+      "home": {
+        "title": "Borrowed Debts",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Янги Borrowed Debt қўшиш",
+        "createOrEditLabel": "Borrowed Debtни таҳрирлаш",
+        "notFound": "No Borrowed Debts found"
+      },
+      "created": "Borrowed Debt {{ param }} билан қўшилди.",
+      "updated": "{{ param }}- Borrowed Debt сақланди.",
+      "deleted": "{{ param }}- Borrowed Debt ўчирилди.",
+      "delete": {
+        "question": "{{ id }}- Borrowed Debtни ўчирмоқчимисиз? "
+      },
+      "detail": {
+        "title": "Borrowed Debt"
+      },
+      "id": "ID",
+      "amount": "Amount",
+      "notes": "Notes",
+      "code": "Code",
+      "date": "Date",
+      "borrowedDebtType": "Borrowed Debt Type"
+    }
+  }
+}

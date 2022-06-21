@@ -14,7 +14,7 @@
         "fail": "<strong>Хатолик юз берди!</strong> Созламалар сақланмади.",
         "emailexists": "<strong>Email банд!</strong> Илтимос, бошқасини киритинг."
       },
-      "success": "<strong>Созламалар сақланди!</strong>",
+      "success": "<strong>Созламалар saqlandi!</strong>",
       "validate": {
         "firstname": {
           "required": "Исмингизни киритинг.",

@@ -24,15 +24,19 @@
     <include file="config/liquibase/changelog/20220616183333_added_entity_OwnerExpenseType.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20220616183334_added_entity_Client.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20220616183335_added_entity_PaymentMethod.xml" relativeToChangelogFile="false"/>
-    <include file="config/liquibase/changelog/20220616183336_added_entity_AssetLive.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20220616183337_added_entity_AssetRegistry.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20220616183338_added_entity_LiabilityRegistry.xml" relativeToChangelogFile="false"/>
-    <include file="config/liquibase/changelog/20220616183339_added_entity_LiabilityLive.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220621190351_added_entity_RequiredProduct.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220621190352_added_entity_RequiredProductType.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220621190353_added_entity_BorrowedDebt.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220621190354_added_entity_BorrowedDebtType.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
     <include file="config/liquibase/changelog/20220616183327_added_entity_constraints_DebtGiven.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20220616183328_added_entity_constraints_DebtReturn.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20220616183329_added_entity_constraints_Expense.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20220616183332_added_entity_constraints_OwnerExpense.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220621190351_added_entity_constraints_RequiredProduct.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220621190353_added_entity_constraints_BorrowedDebt.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
     <!-- jhipster-needle-liquibase-add-incremental-changelog - JHipster will add incremental liquibase changelogs here -->
 </databaseChangeLog>

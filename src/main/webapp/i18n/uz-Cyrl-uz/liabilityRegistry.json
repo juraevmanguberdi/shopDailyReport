@@ -4,13 +4,13 @@
       "home": {
         "title": "Liability Registries",
         "refreshListLabel": "Yangilash",
-        "createLabel": "Янги Liability Registry қўшиш",
-        "createOrEditLabel": "Liability Registryни таҳрирлаш",
-        "notFound": "No Liability Registries found"
+        "createLabel": "Yangi Liability Registry qo'shish",
+        "createOrEditLabel": "Liability Registryni tahrirlash",
+        "notFound": "Liability Registrielar topilmadi"
       },
-      "created": "Liability Registry {{ param }} билан қўшилди.",
-      "updated": "{{ param }}- Liability Registry сақланди.",
-      "deleted": "{{ param }}- Liability Registry ўчирилди.",
+      "created": "Liability Registry {{ param }} bilan qo'shildi.",
+      "updated": "{{ param }}- Liability Registry saqlandi.",
+      "deleted": "{{ param }}- Liability Registry o'chirildi.",
       "delete": {
         "question": "{{ id }}- Liability Registryни ўчирмоқчимисиз? "
       },

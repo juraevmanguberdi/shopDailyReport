@@ -4,13 +4,13 @@
       "home": {
         "title": "Asset Registries",
         "refreshListLabel": "Yangilash",
-        "createLabel": "Янги Asset Registry қўшиш",
-        "createOrEditLabel": "Asset Registryни таҳрирлаш",
-        "notFound": "No Asset Registries found"
+        "createLabel": "Yangi Asset Registry qo'shish",
+        "createOrEditLabel": "Asset Registryni tahrirlash",
+        "notFound": "Asset Registrielar topilmadi"
       },
-      "created": "Asset Registry {{ param }} билан қўшилди.",
-      "updated": "{{ param }}- Asset Registry сақланди.",
-      "deleted": "{{ param }}- Asset Registry ўчирилди.",
+      "created": "Asset Registry {{ param }} bilan qo'shildi.",
+      "updated": "{{ param }}- Asset Registry saqlandi.",
+      "deleted": "{{ param }}- Asset Registry o'chirildi.",
       "delete": {
         "question": "{{ id }}- Asset Registryни ўчирмоқчимисиз? "
       },

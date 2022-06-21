@@ -1,25 +1,29 @@
 {
   "global": {
-    "title": "ShopDailyReport",
+    "title": "Kunlik hisob kitoblar",
     "browsehappy": "Сизнинг браузерингиз <strong>эски</strong>. Илтимос, браузерингизни<a href=\"http://browsehappy.com/?locale=en\">янгиланг</a>.",
     "menu": {
       "home": "Бош саҳифа",
       "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
       "entities": {
         "main": "Маълумотлар",
-        "debtGiven": "Debt Given",
-        "debtReturn": "Debt Return",
-        "expense": "Expense",
-        "expenseType": "Expense Type",
-        "dailyRegistryShop": "Daily Registry Shop",
+        "debtGiven": "Berilgan qarzlar",
+        "debtReturn": "Qaytarilgan qarzlar",
+        "expense": "Xarajat",
+        "expenseType": "Xarajat turi",
+        "dailyRegistryShop": "Kunlik hisob kitoblar",
         "ownerExpense": "Owner Expense",
         "ownerExpenseType": "Owner Expense Type",
-        "client": "Client",
-        "paymentMethod": "Payment Method",
+        "client": "Mijoz",
+        "paymentMethod": "To'lov turlari",
         "assetLive": "Asset Live",
         "assetRegistry": "Asset Registry",
         "liabilityRegistry": "Liability Registry",
         "liabilityLive": "Liability Live",
+        "requiredProduct": "Required Product",
+        "requiredProductType": "Required Product Type",
+        "borrowedDebt": "Borrowed Debt",
+        "borrowedDebtType": "Borrowed Debt Type",
         "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
       },
       "account": {
@@ -50,10 +54,10 @@
       "username.placeholder": "Сизнинг логинингиз",
       "currentpassword.label": "Ҳозирги паролингиз",
       "currentpassword.placeholder": "Ҳозирги паролингиз",
-      "newpassword.label": "Янги парол",
-      "newpassword.placeholder": "Янги парол",
-      "confirmpassword": "Янги паролнинг тасдиғи",
-      "confirmpassword.placeholder": "Янги паролнинг тасдиғи",
+      "newpassword.label": "Yangi парол",
+      "newpassword.placeholder": "Yangi парол",
+      "confirmpassword": "Yangi паролнинг тасдиғи",
+      "confirmpassword.placeholder": "Yangi паролнинг тасдиғи",
       "email": "Email",
       "email.placeholder": "Сизнинг email"
     },
@@ -66,7 +70,7 @@
         },
         "register": {
           "noaccount": "Сиз рўйхатдан ўтмаганмисиз?",
-          "link": "Янги фойдаланувчи қўшинг"
+          "link": "Yangi фойдаланувчи қўшинг"
         }
       },
       "error": {
@@ -102,8 +106,8 @@
   },
   "entity": {
     "action": {
-      "addblob": "Бинар маълумот қўшиш",
-      "addimage": "Расм қўшиш",
+      "addblob": "Бинар маълумот qo'shish",
+      "addimage": "Расм qo'shish",
       "back": "Орқага",
       "cancel": "Бекор қилиш",
       "delete": "Ўчириш",
@@ -141,10 +145,10 @@
     "Size": "{{ fieldName }} майдонинг ўлчами нотўғри!",
     "userexists": "Ушбу фойдаланувчи номи тизимда мавжуд!",
     "emailexists": "Email аллақачон тизимда мавжуд!",
-    "idexists": "Янги {{ entityName }} IDси тизимда мавжуд ID бўлмаслиги керак.",
+    "idexists": "Yangi {{ entityName }} IDси тизимда мавжуд ID бўлмаслиги керак.",
     "idnull": "Нотўғри ID",
     "idinvalid": "Invalid Id",
-    "idnotfound": "ID cannot be found",
+    "idnotfound": "ID cannot be topilmadi",
     "file": {
       "could.not.extract": "Файлни чиқариб бўлмайди",
       "not.image": "Файл расм бўлиши керак эди, лекин \"{{ fileType }}\" топилди"

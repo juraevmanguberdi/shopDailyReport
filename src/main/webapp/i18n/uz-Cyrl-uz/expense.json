@@ -2,27 +2,27 @@
   "shopDailyReportApp": {
     "expense": {
       "home": {
-        "title": "Expenses",
+        "title": "Xarajatlar",
         "refreshListLabel": "Yangilash",
-        "createLabel": "Янги Expense қўшиш",
-        "createOrEditLabel": "Expenseни таҳрирлаш",
-        "notFound": "No Expenses found"
+        "createLabel": "Yangi xarajat qo'shish",
+        "createOrEditLabel": "Xarajatni tahrirlash",
+        "notFound": "Xarajatlar topilmadi"
       },
-      "created": "Expense {{ param }} билан қўшилди.",
-      "updated": "{{ param }}- Expense сақланди.",
-      "deleted": "{{ param }}- Expense ўчирилди.",
+      "created": "Xarajat {{ param }} bilan qo'shildi.",
+      "updated": "{{ param }}- Xarajat saqlandi.",
+      "deleted": "{{ param }}- Xarajat o'chirildi.",
       "delete": {
-        "question": "{{ id }}- Expenseни ўчирмоқчимисиз? "
+        "question": "{{ id }}- Xarajatни ўчирмоқчимисиз? "
       },
       "detail": {
-        "title": "Expense"
+        "title": "Xarajat"
       },
       "id": "ID",
-      "amount": "Amount",
-      "expenseDate": "Expense Date",
-      "notes": "Notes",
+      "amount": "Summasi",
+      "expenseDate": "Xarajat sanasi",
+      "notes": "Qo'shimcha ma'lumot",
       "code": "Code",
-      "expenseType": "Expense Type"
+      "expenseType": "Xarajat turi"
     }
   }
 }

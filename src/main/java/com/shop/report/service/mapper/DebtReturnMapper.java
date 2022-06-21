@@ -13,8 +13,6 @@ import org.mapstruct.*;
  */
 @Mapper(componentModel = "spring")
 public interface DebtReturnMapper extends EntityMapper<DebtReturnDTO, DebtReturn> {
-    @Mapping(target = "client", source = "client", qualifiedByName = "clientId")
-    @Mapping(target = "paymentMethod", source = "paymentMethod", qualifiedByName = "paymentMethodId")
     DebtReturnDTO toDto(DebtReturn s);
 
     @Named("clientId")

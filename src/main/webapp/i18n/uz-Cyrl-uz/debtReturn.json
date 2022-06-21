@@ -2,28 +2,28 @@
   "shopDailyReportApp": {
     "debtReturn": {
       "home": {
-        "title": "Debt Returns",
+        "title": "Qaytarilgan qarzlar",
         "refreshListLabel": "Yangilash",
-        "createLabel": "Янги Debt Return қўшиш",
-        "createOrEditLabel": "Debt Returnни таҳрирлаш",
-        "notFound": "No Debt Returns found"
+        "createLabel": "Yangi qaytarilgan qarz qo'shish",
+        "createOrEditLabel": "Qaytarilgan qarzni tahrirlash",
+        "notFound": "Qaytarilgan qarzlar topilmadi"
       },
-      "created": "Debt Return {{ param }} билан қўшилди.",
-      "updated": "{{ param }}- Debt Return сақланди.",
-      "deleted": "{{ param }}- Debt Return ўчирилди.",
+      "created": "Qaytarilgan qarz {{ param }} bilan qo'shildi.",
+      "updated": "{{ param }}- Qaytarilgan qarz saqlandi.",
+      "deleted": "{{ param }}- Qaytarilgan qarz o'chirildi.",
       "delete": {
-        "question": "{{ id }}- Debt Returnни ўчирмоқчимисиз? "
+        "question": "{{ id }}- Qaytarilgan qarzни ўчирмоқчимисиз? "
       },
       "detail": {
-        "title": "Debt Return"
+        "title": "Qaytarilgan qarzlar"
       },
       "id": "ID",
-      "returnAmount": "Return Amount",
-      "returnDate": "Return Date",
+      "returnAmount": "Summasi",
+      "returnDate": "Sanasi",
       "code": "Code",
-      "notes": "Notes",
-      "client": "Client",
-      "paymentMethod": "Payment Method"
+      "notes": "Qo'shimcha ma'lumot",
+      "client": "Mijoz",
+      "paymentMethod": "To'lov turi"
     }
   }
 }

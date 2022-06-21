@@ -10,10 +10,12 @@ import OwnerExpenseService from './owner-expense/owner-expense.service';
 import OwnerExpenseTypeService from './owner-expense-type/owner-expense-type.service';
 import ClientService from './client/client.service';
 import PaymentMethodService from './payment-method/payment-method.service';
-import AssetLiveService from './asset-live/asset-live.service';
 import AssetRegistryService from './asset-registry/asset-registry.service';
 import LiabilityRegistryService from './liability-registry/liability-registry.service';
-import LiabilityLiveService from './liability-live/liability-live.service';
+import RequiredProductService from './required-product/required-product.service';
+import RequiredProductTypeService from './required-product-type/required-product-type.service';
+import BorrowedDebtService from './borrowed-debt/borrowed-debt.service';
+import BorrowedDebtTypeService from './borrowed-debt-type/borrowed-debt-type.service';
 // jhipster-needle-add-entity-service-to-entities-component-import - JHipster will import entities services here
 
 @Component
@@ -28,9 +30,11 @@ export default class Entities extends Vue {
   @Provide('ownerExpenseTypeService') private ownerExpenseTypeService = () => new OwnerExpenseTypeService();
   @Provide('clientService') private clientService = () => new ClientService();
   @Provide('paymentMethodService') private paymentMethodService = () => new PaymentMethodService();
-  @Provide('assetLiveService') private assetLiveService = () => new AssetLiveService();
   @Provide('assetRegistryService') private assetRegistryService = () => new AssetRegistryService();
   @Provide('liabilityRegistryService') private liabilityRegistryService = () => new LiabilityRegistryService();
-  @Provide('liabilityLiveService') private liabilityLiveService = () => new LiabilityLiveService();
+  @Provide('requiredProductService') private requiredProductService = () => new RequiredProductService();
+  @Provide('requiredProductTypeService') private requiredProductTypeService = () => new RequiredProductTypeService();
+  @Provide('borrowedDebtService') private borrowedDebtService = () => new BorrowedDebtService();
+  @Provide('borrowedDebtTypeService') private borrowedDebtTypeService = () => new BorrowedDebtTypeService();
   // jhipster-needle-add-entity-service-to-entities-component - JHipster will import entities services here
 }

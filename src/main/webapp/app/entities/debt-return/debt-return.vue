@@ -32,9 +32,17 @@
               <span v-text="$t('global.field.id')">ID</span>
               <jhi-sort-indicator :current-order="propOrder" :reverse="reverse" :field-name="'id'"></jhi-sort-indicator>
             </th>
+            <th scope="row" v-on:click="changeOrder('client.id')">
+              <span v-text="$t('shopDailyReportApp.debtReturn.client')">Client</span>
+              <jhi-sort-indicator :current-order="propOrder" :reverse="reverse" :field-name="'client.id'"></jhi-sort-indicator>
+            </th>
             <th scope="row" v-on:click="changeOrder('returnAmount')">
               <span v-text="$t('shopDailyReportApp.debtReturn.returnAmount')">Return Amount</span>
               <jhi-sort-indicator :current-order="propOrder" :reverse="reverse" :field-name="'returnAmount'"></jhi-sort-indicator>
+            </th>
+            <th scope="row" v-on:click="changeOrder('paymentMethod.id')">
+              <span v-text="$t('shopDailyReportApp.debtReturn.paymentMethod')">Payment Method</span>
+              <jhi-sort-indicator :current-order="propOrder" :reverse="reverse" :field-name="'paymentMethod.id'"></jhi-sort-indicator>
             </th>
             <th scope="row" v-on:click="changeOrder('returnDate')">
               <span v-text="$t('shopDailyReportApp.debtReturn.returnDate')">Return Date</span>
@@ -48,14 +56,6 @@
               <span v-text="$t('shopDailyReportApp.debtReturn.notes')">Notes</span>
               <jhi-sort-indicator :current-order="propOrder" :reverse="reverse" :field-name="'notes'"></jhi-sort-indicator>
             </th>
-            <th scope="row" v-on:click="changeOrder('client.id')">
-              <span v-text="$t('shopDailyReportApp.debtReturn.client')">Client</span>
-              <jhi-sort-indicator :current-order="propOrder" :reverse="reverse" :field-name="'client.id'"></jhi-sort-indicator>
-            </th>
-            <th scope="row" v-on:click="changeOrder('paymentMethod.id')">
-              <span v-text="$t('shopDailyReportApp.debtReturn.paymentMethod')">Payment Method</span>
-              <jhi-sort-indicator :current-order="propOrder" :reverse="reverse" :field-name="'paymentMethod.id'"></jhi-sort-indicator>
-            </th>
             <th scope="row"></th>
           </tr>
         </thead>
@@ -64,24 +64,20 @@
             <td>
               <router-link :to="{ name: 'DebtReturnView', params: { debtReturnId: debtReturn.id } }">{{ debtReturn.id }}</router-link>
             </td>
-            <td>{{ debtReturn.returnAmount }}</td>
-            <td>{{ debtReturn.returnDate }}</td>
-            <td>{{ debtReturn.code }}</td>
-            <td>{{ debtReturn.notes }}</td>
             <td>
               <div v-if="debtReturn.client">
                 <router-link :to="{ name: 'ClientView', params: { clientId: debtReturn.client.id } }">{{
-                  debtReturn.client.id
-                }}</router-link>
+                    debtReturn.client.surName + ' ' + debtReturn.client.name
+                  }}</router-link>
               </div>
             </td>
-            <td>
-              <div v-if="debtReturn.paymentMethod">
-                <router-link :to="{ name: 'PaymentMethodView', params: { paymentMethodId: debtReturn.paymentMethod.id } }">{{
-                  debtReturn.paymentMethod.id
-                }}</router-link>
-              </div>
-            </td>
+            <td>{{ debtReturn.returnAmount }}</td>
+            <td>{{ debtReturn.paymentMethod.name}}</td>
+            <td>{{ debtReturn.returnDate }}</td>
+            <td>{{ debtReturn.code }}</td>
+            <td>{{ debtReturn.notes }}</td>
+
+
             <td class="text-right">
               <div class="btn-group">
                 <router-link :to="{ name: 'DebtReturnView', params: { debtReturnId: debtReturn.id } }" custom v-slot="{ navigate }">

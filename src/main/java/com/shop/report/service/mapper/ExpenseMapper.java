@@ -11,7 +11,6 @@ import org.mapstruct.*;
  */
 @Mapper(componentModel = "spring")
 public interface ExpenseMapper extends EntityMapper<ExpenseDTO, Expense> {
-    @Mapping(target = "expenseType", source = "expenseType", qualifiedByName = "expenseTypeId")
     ExpenseDTO toDto(Expense s);
 
     @Named("expenseTypeId")

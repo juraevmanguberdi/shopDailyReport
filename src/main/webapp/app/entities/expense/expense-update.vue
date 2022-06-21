@@ -15,6 +15,35 @@
             <input type="text" class="form-control" id="id" name="id" v-model="expense.id" readonly />
           </div>
           <div class="form-group">
+            <label class="form-control-label" v-text="$t('shopDailyReportApp.expense.expenseType')" for="expense-expenseType"
+            >Expense Type</label
+            >
+            <select
+              class="form-control"
+              id="expense-expenseType"
+              data-cy="expenseType"
+              name="expenseType"
+              v-model="expense.expenseType"
+              required
+            >
+              <option v-if="!expense.expenseType" v-bind:value="null" selected></option>
+              <option
+                v-bind:value="
+                  expense.expenseType && expenseTypeOption.id === expense.expenseType.id ? expense.expenseType : expenseTypeOption
+                "
+                v-for="expenseTypeOption in expenseTypes"
+                :key="expenseTypeOption.id"
+              >
+                {{ expenseTypeOption.name }}
+              </option>
+            </select>
+          </div>
+          <div v-if="$v.expense.expenseType.$anyDirty && $v.expense.expenseType.$invalid">
+            <small class="form-text text-danger" v-if="!$v.expense.expenseType.required" v-text="$t('entity.validation.required')">
+              This field is required.
+            </small>
+          </div>
+          <div class="form-group">
             <label class="form-control-label" v-text="$t('shopDailyReportApp.expense.amount')" for="expense-amount">Amount</label>
             <input
               type="number"
@@ -89,35 +118,7 @@
               v-model="$v.expense.code.$model"
             />
           </div>
-          <div class="form-group">
-            <label class="form-control-label" v-text="$t('shopDailyReportApp.expense.expenseType')" for="expense-expenseType"
-              >Expense Type</label
-            >
-            <select
-              class="form-control"
-              id="expense-expenseType"
-              data-cy="expenseType"
-              name="expenseType"
-              v-model="expense.expenseType"
-              required
-            >
-              <option v-if="!expense.expenseType" v-bind:value="null" selected></option>
-              <option
-                v-bind:value="
-                  expense.expenseType && expenseTypeOption.id === expense.expenseType.id ? expense.expenseType : expenseTypeOption
-                "
-                v-for="expenseTypeOption in expenseTypes"
-                :key="expenseTypeOption.id"
-              >
-                {{ expenseTypeOption.id }}
-              </option>
-            </select>
-          </div>
-          <div v-if="$v.expense.expenseType.$anyDirty && $v.expense.expenseType.$invalid">
-            <small class="form-text text-danger" v-if="!$v.expense.expenseType.required" v-text="$t('entity.validation.required')">
-              This field is required.
-            </small>
-          </div>
+
         </div>
         <div>
           <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" v-on:click="previousState()">

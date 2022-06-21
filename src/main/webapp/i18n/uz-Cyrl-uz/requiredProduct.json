@@ -1,0 +1,27 @@
+{
+  "shopDailyReportApp": {
+    "requiredProduct": {
+      "home": {
+        "title": "Required Products",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Янги Required Product қўшиш",
+        "createOrEditLabel": "Required Productни таҳрирлаш",
+        "notFound": "No Required Products found"
+      },
+      "created": "Required Product {{ param }} билан қўшилди.",
+      "updated": "{{ param }}- Required Product сақланди.",
+      "deleted": "{{ param }}- Required Product ўчирилди.",
+      "delete": {
+        "question": "{{ id }}- Required Productни ўчирмоқчимисиз? "
+      },
+      "detail": {
+        "title": "Required Product"
+      },
+      "id": "ID",
+      "name": "Name",
+      "note": "Note",
+      "code": "Code",
+      "requiredProductType": "Required Product Type"
+    }
+  }
+}

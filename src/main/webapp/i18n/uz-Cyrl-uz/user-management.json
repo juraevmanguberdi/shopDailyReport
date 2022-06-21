@@ -3,12 +3,12 @@
     "home": {
       "title": "Фойдаланувчи",
       "refreshListLabel": "Yangilash",
-      "createLabel": "Янги фойдаланувчи қўшиш",
-      "createOrEditLabel": "Фойдаланувчини таҳрирлаш"
+      "createLabel": "Yangi фойдаланувчи qo'shish",
+      "createOrEditLabel": "Фойдаланувчиni tahrirlash"
     },
-    "created": "Янги фойдаланувчи {{ param }} ID билан қўшилди.",
-    "updated": "{{ param }} - фойдаланувчи сақланди",
-    "deleted": "{ param }} - фойдаланувчи ўчирилди",
+    "created": "Yangi фойдаланувчи {{ param }} ID bilan qo'shildi.",
+    "updated": "{{ param }} - фойдаланувчи saqlandi",
+    "deleted": "{ param }} - фойдаланувчи o'chirildi",
     "delete": {
       "question": "{{ login }} фойдаланувчини ўчиришни ҳохлайсизми?"
     },

@@ -4,6 +4,8 @@ import com.shop.report.domain.DailyRegistryShop;
 import com.shop.report.repository.DailyRegistryShopRepository;
 import com.shop.report.service.dto.DailyRegistryShopDTO;
 import com.shop.report.service.mapper.DailyRegistryShopMapper;
+
+import java.time.LocalDate;
 import java.util.Optional;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -102,6 +104,12 @@ public class DailyRegistryShopService {
         log.debug("Request to get DailyRegistryShop : {}", id);
         return dailyRegistryShopRepository.findById(id).map(dailyRegistryShopMapper::toDto);
     }
+    @Transactional(readOnly = true)
+    public Optional<DailyRegistryShopDTO> findOneByToday(LocalDate date) {
+        log.debug("Request to get DailyRegistryShop : {}", date);
+        return dailyRegistryShopRepository.findByToday(date).map(dailyRegistryShopMapper::toDto);
+    }
+
 
     /**
      * Delete the dailyRegistryShop by id.
@@ -111,5 +119,9 @@ public class DailyRegistryShopService {
     public void delete(Long id) {
         log.debug("Request to delete DailyRegistryShop : {}", id);
         dailyRegistryShopRepository.deleteById(id);
+    }
+
+    public void updateByToday( Long debtGiven, LocalDate today) {
+        dailyRegistryShopRepository.updateByToday(debtGiven, today);
     }
 }

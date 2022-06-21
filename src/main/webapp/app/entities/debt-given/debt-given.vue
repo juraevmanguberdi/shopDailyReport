@@ -32,6 +32,10 @@
               <span v-text="$t('global.field.id')">ID</span>
               <jhi-sort-indicator :current-order="propOrder" :reverse="reverse" :field-name="'id'"></jhi-sort-indicator>
             </th>
+            <th scope="row" v-on:click="changeOrder('client.id')">
+              <span v-text="$t('shopDailyReportApp.debtGiven.client')">Client</span>
+              <jhi-sort-indicator :current-order="propOrder" :reverse="reverse" :field-name="'client.id'"></jhi-sort-indicator>
+            </th>
             <th scope="row" v-on:click="changeOrder('debtAmount')">
               <span v-text="$t('shopDailyReportApp.debtGiven.debtAmount')">Debt Amount</span>
               <jhi-sort-indicator :current-order="propOrder" :reverse="reverse" :field-name="'debtAmount'"></jhi-sort-indicator>
@@ -52,10 +56,6 @@
               <span v-text="$t('shopDailyReportApp.debtGiven.notes')">Notes</span>
               <jhi-sort-indicator :current-order="propOrder" :reverse="reverse" :field-name="'notes'"></jhi-sort-indicator>
             </th>
-            <th scope="row" v-on:click="changeOrder('client.id')">
-              <span v-text="$t('shopDailyReportApp.debtGiven.client')">Client</span>
-              <jhi-sort-indicator :current-order="propOrder" :reverse="reverse" :field-name="'client.id'"></jhi-sort-indicator>
-            </th>
             <th scope="row"></th>
           </tr>
         </thead>
@@ -64,16 +64,17 @@
             <td>
               <router-link :to="{ name: 'DebtGivenView', params: { debtGivenId: debtGiven.id } }">{{ debtGiven.id }}</router-link>
             </td>
-            <td>{{ debtGiven.debtAmount }}</td>
-            <td>{{ debtGiven.debtDate }}</td>
-            <td>{{ debtGiven.returnDate }}</td>
-            <td>{{ debtGiven.code }}</td>
-            <td>{{ debtGiven.notes }}</td>
             <td>
               <div v-if="debtGiven.client">
                 <router-link :to="{ name: 'ClientView', params: { clientId: debtGiven.client.id } }">{{ debtGiven.client.surName+" " + debtGiven.client.name }}</router-link>
               </div>
             </td>
+            <td>{{ debtGiven.debtAmount }}</td>
+            <td>{{ debtGiven.debtDate }}</td>
+            <td>{{ debtGiven.returnDate }}</td>
+            <td>{{ debtGiven.code }}</td>
+            <td>{{ debtGiven.notes }}</td>
+
             <td class="text-right">
               <div class="btn-group">
                 <router-link :to="{ name: 'DebtGivenView', params: { debtGivenId: debtGiven.id } }" custom v-slot="{ navigate }">

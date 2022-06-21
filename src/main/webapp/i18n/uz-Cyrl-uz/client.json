@@ -2,29 +2,29 @@
   "shopDailyReportApp": {
     "client": {
       "home": {
-        "title": "Clients",
+        "title": "Mijozlar",
         "refreshListLabel": "Yangilash",
-        "createLabel": "Янги Client қўшиш",
-        "createOrEditLabel": "Clientни таҳрирлаш",
-        "notFound": "No Clients found"
+        "createLabel": "Yangi Mijoz qo'shish",
+        "createOrEditLabel": "Mijozni tahrirlash",
+        "notFound": "Mijozlar topilmadi"
       },
-      "created": "Client {{ param }} билан қўшилди.",
-      "updated": "{{ param }}- Client сақланди.",
-      "deleted": "{{ param }}- Client ўчирилди.",
+      "created": "Mijoz {{ param }} bilan qo'shildi.",
+      "updated": "{{ param }}- Mijoz saqlandi.",
+      "deleted": "{{ param }}- Mijoz o'chirildi.",
       "delete": {
-        "question": "{{ id }}- Clientни ўчирмоқчимисиз? "
+        "question": "{{ id }}- Mijozни ўчирмоқчимисиз? "
       },
       "detail": {
-        "title": "Client"
+        "title": "Mijoz"
       },
       "id": "ID",
-      "name": "Name",
-      "surName": "Sur Name",
-      "debtAmount": "Debt Amount",
-      "address": "Address",
-      "phone": "Phone",
-      "notes": "Notes",
-      "createdDate": "Created Date",
+      "name": "Ism",
+      "surName": "Familiyasi",
+      "debtAmount": "Qarz miqdori",
+      "address": "Manzil",
+      "phone": "Tel. nomer",
+      "notes": "Qo'shimcha ma'lumot",
+      "createdDate": "Yaratilgan vaqti",
       "code": "Code"
     }
   }

@@ -38,6 +38,9 @@ public class ClientService {
      */
     public ClientDTO save(ClientDTO clientDTO) {
         log.debug("Request to save Client : {}", clientDTO);
+        if (clientDTO.getDebtAmount()==null){
+            clientDTO.setDebtAmount(Long.valueOf(0));
+        }
         Client client = clientMapper.toEntity(clientDTO);
         client = clientRepository.save(client);
         return clientMapper.toDto(client);
